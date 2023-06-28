@@ -1,0 +1,14 @@
+body {
+    background-color: gray
+    
+}
+#all-contents {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    max-width: 300px;
+    margin: auto;
+    border: 3px solid;
+}
+#difficulty {
+    max-width: 300px;
+    margin: auto;
+}
