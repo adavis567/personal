@@ -1,3 +1,7 @@
+var score = 0
+var computerScore = 0
+document.getElementById('score').innerHTML=score
+document.getElementById('compScore').innerHTML=computerScore
 function rock() {
     var randNum = Math.ceil(Math.random() * 3)
     var choice
@@ -15,9 +19,14 @@ function rock() {
     }
   else if (choice === 'paper') {
     alert('loser')
+    computerScore = computerScore + 1
+    document.getElementById('compScore').innerHTML=computerScore
   }
   else if (choice === 'scissors') {
    alert('winner')
+   score = score + 1
+  document.getElementById('score').innerHTML=score
+   
   }
 }
 function paper() {
@@ -34,12 +43,17 @@ function paper() {
     }
   if (choice === 'rock') {
       alert('winner')
+       score = score + 1
+  document.getElementById('score').innerHTML=score
+   
     }
   else if (choice === 'paper') {
     alert('tie')
   }
   else if (choice === 'scissors') {
    alert('loser')
+   computerScore = computerScore + 1
+    document.getElementById('compScore').innerHTML=computerScore
   }
 }
 function scissors() {
@@ -56,9 +70,14 @@ function scissors() {
     }
   if (choice === 'rock') {
       alert('loser')
+      computerScore = computerScore + 1
+    document.getElementById('compScore').innerHTML=computerScore
     }
   else if (choice === 'paper') {
     alert('winner')
+     score = score + 1
+  document.getElementById('score').innerHTML=score
+   
   }
   else if (choice === 'scissors') {
    alert('tie')
