@@ -12,3 +12,6 @@ body {
     max-width: 300px;
     margin: auto;
 }
+.hidden {
+    display: none;
+  }
