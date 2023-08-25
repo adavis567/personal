@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>Number Guesser Easy Mode</title>
     <link rel="stylesheet" href="style.css">
     <script src="easyMode.js"></script>
 </head>
@@ -19,8 +20,8 @@
     </div>
     <div id="game" class="all-contents">
         <p>Guess the Random Number between 1-10. You have 3 tries</p>
-        <button onClick="rand()">Generate Random Number</button>
-        <div id="randNum"></div>
+        <button onClick="rand()" id="rand">Generate Random Number</button>
+        <div id="randNum" class="hidden"></div>
         <input type='text' id="guess" value="">
         <button onClick="guess()">Submit</button>
         <div id='right'></div>
@@ -28,14 +29,14 @@
     <div id="winner-screen" class="hidden">
         <h2>Congratulations! You guessed correctly!</h2>
         <button onclick="resetGame()">Try Again</button>
-      </div>
-      
-      <div id="loser-screen" class="hidden">
+    </div>
+
+    <div id="loser-screen" class="hidden">
         <h2>Sorry, you are out of tries.</h2>
         <p>The number was <span id="correct-number"></span>.</p>
-         <button onclick="resetGame()">Try Again</button>
-      </div>
-      
+        <button onclick="resetGame()">Try Again</button>
+    </div>
+
 </body>
 
 </html>
