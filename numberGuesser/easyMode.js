@@ -35,8 +35,8 @@ function guess() {
   }
   else if (guess === randNum) {
     showWinnerScreen();
-  } 
-// Clear the input field after guess
+  }
+  // Clear the input field after guess
   document.getElementById('guess').value = '';
 }
 
@@ -54,10 +54,10 @@ function showLoserScreen(correctNumber) {
   document.getElementById('loser-screen').classList.remove('hidden');
   document.getElementById('game').classList.add('hidden')
   document.getElementById('correct-number').textContent = correctNumber;
-}function resetGame() {
+} function resetGame() {
   // Relods entire game
- location.reload();
+  location.reload();
 
-  
-  
+
+
 }
