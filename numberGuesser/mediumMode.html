@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Number Guesser Medium Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="mediumMode.js"></script>
+</head>
+
+<body>
+    <div id="all-contents">
+        <h1>
+            Medium Mode
+
+        </h1>
+        <h2>
+            <a href="homePage.html">Home</a>
+        </h2>
+        <h3> Tries: <div id='tries'></div>
+    </div>
+    <div id="game" class="all-contents">
+        <p>Guess the Random Number between 1-20. You have 5 tries</p>
+        <button onClick="rand()" id="rand">Generate Random Number</button>
+        <div id="randNum" class="hidden"></div>
+        <input type='text' id="guess" value="">
+        <button onClick="guess()">Submit</button>
+        <div id='right'></div>
+    </div>
+    <div id="winner-screen" class="hidden">
+        <h2>Congratulations! You guessed correctly!</h2>
+        <button onclick="resetGame()">Try Again</button>
+    </div>
+
+    <div id="loser-screen" class="hidden">
+        <h2>Sorry, you are out of tries.</h2>
+        <p>The number was <span id="correct-number"></span>.</p>
+        <button onclick="resetGame()">Try Again</button>
+    </div>
+
+</body>
+
+</html>
