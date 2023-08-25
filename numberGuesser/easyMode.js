@@ -17,16 +17,14 @@ function guess() {
     alert('the number is GREATER than ' + guess)
     tries++
     document.getElementById('tries').innerHTML = tries;
+    if (tries === maxTries) {
+      showLoserScreen(randNum);
+    } else {
+      showMessage('Try again.');
+    }
   }
   else if (guess > randNum) {
     alert('the number is LESS than ' + guess)
-    tries++
-    document.getElementById('tries').innerHTML = tries;
-  }
-  else if (guess === randNum) {
-    showWinnerScreen();
-  } 
-  else {
     tries++;
     document.getElementById('tries').innerHTML = tries;
     if (tries === maxTries) {
@@ -35,8 +33,10 @@ function guess() {
       showMessage('Try again.');
     }
   }
-
-  // Clear the input field after guess
+  else if (guess === randNum) {
+    showWinnerScreen();
+  } 
+// Clear the input field after guess
   document.getElementById('guess').value = '';
 }
 
