@@ -8,6 +8,12 @@ body {
     margin: auto;
     border: 3px solid;
 }
+.all-contents {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    max-width: 300px;
+    margin: auto;
+    border: 3px solid;
+}
 #difficulty {
     max-width: 300px;
     margin: auto;
@@ -15,3 +21,9 @@ body {
 .hidden {
     display: none;
   }
+#winner-screen {
+    margin-left: 500px;
+}
+#loser-screen {
+    margin-left: 560px;
+}

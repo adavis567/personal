@@ -35,17 +35,17 @@ function showMessage(message) {
 
 function showWinnerScreen() {
   document.getElementById('winner-screen').classList.remove('hidden');
+  document.getElementById('game').classList.add('hidden')
 }
 
 function showLoserScreen(correctNumber) {
   document.getElementById('loser-screen').classList.remove('hidden');
+  document.getElementById('game').classList.add('hidden')
   document.getElementById('correct-number').textContent = correctNumber;
 }function resetGame() {
-  // Reset tries, hide screens, and clear messages and input
-  tries = 0;
+  // Relods entire game
  location.reload();
 
   
-  // Reset or regenerate random number if needed
-  rand();
+  
 }
