@@ -26,14 +26,18 @@
         <button onClick="guess()">Submit</button>
         <div id='right'></div>
     </div>
+    <div >
+        <p id="hint1"></p>
+        <p id="hint2"></p>
+    </div>
     <div id="winner-screen" class="hidden">
-        <h2>Congratulations! You guessed correctly!</h2>
+        <h2>What is that insane luck... erm I mean Good job!</h2>
         <button onclick="resetGame()">Try Again</button>
     </div>
 
     <div id="loser-screen" class="hidden">
-        <h2>Sorry, you are out of tries.</h2>
-        <p>The number was <span id="correct-number"></span>.</p>
+        <h2>ahhhhhh wrong lol</h2>
+        <p>The number I was thinking of was <span id="correct-number"></span>.</p>
         <button onclick="resetGame()">Try Again</button>
     </div>
 
