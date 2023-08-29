@@ -11,3 +11,9 @@
     margin-right: 597px;
     outline: #607DFF solid 8px;;
 }
+.hidden {
+    display:none
+}
+#startUp {
+    margin-left: 400px;
+}

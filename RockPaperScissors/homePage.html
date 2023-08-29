@@ -9,26 +9,36 @@
     <script src="rps.js"></script>
 </head>
 
-<body class="background" >
-  <p>Player:<div id='score'></div></p>
-  <p>Computer:<div id='compScore'></div></p>
-  <p>Ties:<div id='ties'></div></p>
-    <h1 id="title">
-        Rock Paper Scissors
-    </h1>
-    <div id="game">
-        <button onCLick="rock()">
-            <img src="https://www.easylinedrawing.com/wp-content/uploads/2021/07/rock_drawing_tutorial.png" alt="rock"
-                width="100" height="110">
-        </button>
-        <button onClick="paper()">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU32KPMRaS1Y6aa97Y_M4JUAJTeuLuvGy0rg&usqp=CAU"
-                alt="paper" width="100" height="110">
-        </button>
-        <button onClick="scissors()">
-            <img src="data:image/jpeg;base64,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"
-            alt="scissors" width="100" height="110">
-        </button>
+<body class="background">
+    <h1 id="startUp">How Many Rounds Do You Want To Go?</h1>
+    <input type="text" id="answer">
+    <div class="hidden">
+        <p>Player:
+        <div id='score'></div>
+        </p>
+        <p>Computer:
+        <div id='compScore'></div>
+        </p>
+        <p>Ties:
+        <div id='ties'></div>
+        </p>
+        <h1 id="title">
+            Rock Paper Scissors
+        </h1>
+        <div id="game">
+            <button onCLick="rock()">
+                <img src="https://www.easylinedrawing.com/wp-content/uploads/2021/07/rock_drawing_tutorial.png"
+                    alt="rock" width="100" height="110">
+            </button>
+            <button onClick="paper()">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU32KPMRaS1Y6aa97Y_M4JUAJTeuLuvGy0rg&usqp=CAU"
+                    alt="paper" width="100" height="110">
+            </button>
+            <button onClick="scissors()">
+                <img src="data:image/jpeg;base64,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"
+                    alt="scissors" width="100" height="110">
+            </button>
+        </div>
     </div>
 </body>
 
