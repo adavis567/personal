@@ -14,7 +14,7 @@ function guess() {
   const guess = parseInt(document.getElementById('guess').value, 10);
 
   if (guess < randNum) {
-    alert('the number is GREATER than ' + guess)
+    alert('Lol too low ')
     tries++
     document.getElementById('tries').innerHTML = tries;
     if (tries === maxTries) {
@@ -24,7 +24,7 @@ function guess() {
     }
   }
   else if (guess > randNum) {
-    alert('the number is LESS than ' + guess)
+    alert('Woah that is way too high bruh ')
     tries++;
     document.getElementById('tries').innerHTML = tries;
     if (tries === maxTries) {
