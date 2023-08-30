@@ -1,6 +1,16 @@
 var score = 0
 var computerScore = 0
 var ties = 0
+var games
+var finalScore
+var finalScomp
+function rounds() {
+  games = document.getElementById('answer').value
+  document.getElementById('rounds').innerHTML = games
+  document.getElementById('startUp').classList.add('hidden')
+  document.getElementById("games").classList.remove("hidden")
+
+}
 document.getElementById('score').innerHTML = score
 document.getElementById('compScore').innerHTML = computerScore
 document.getElementById('ties').innerHTML = ties
@@ -32,6 +42,11 @@ function rock() {
     document.getElementById('score').innerHTML = score
 
   }
+  games = games - 1
+  document.getElementById("rounds").innerHTML = games
+  if (games === 0) {
+    gameOver()
+  }
 }
 function paper() {
   var randNum = Math.ceil(Math.random() * 3)
@@ -60,6 +75,11 @@ function paper() {
     alert('loser')
     computerScore = computerScore + 1
     document.getElementById('compScore').innerHTML = computerScore
+  }
+  games = games - 1
+  document.getElementById("rounds").innerHTML = games
+  if (games === 0) {
+    gameOver()
   }
 }
 function scissors() {
@@ -90,4 +110,33 @@ function scissors() {
     ties = ties + 1
     document.getElementById('ties').innerHTML = ties
   }
+  games = games - 1
+  document.getElementById("rounds").innerHTML = games
+}
+
+
+
+function gameOver() {
+  finalScore = score
+  finalScomp = computerScore
+  console.log(finalScore)
+  console.log(finalScomp)
+  document.getElementById("games").classList.add("hidden")
+  document.getElementById("gameOverScreen").classList.remove("hidden")
+  document.getElementById("finalPlayer").innerHTML = "Player Score: " + finalScore
+  document.getElementById("finalComp").innerHTML = "Computer Score: " + finalScomp
+
+  if (finalScore > finalScomp) {
+    document.getElementById("message").innerHTML = "You Won!"
+  }
+  else if (finalScore < finalScomp) {
+    document.getElementById("message").innerHTML = "You Lost!"
+
+  }
+  else if (finalScore === finalScomp) {
+    document.getElementById("message").innerHTML = "Its a Tie!"
+  }
+}
+function playAgain() {
+  location.reload()
 }

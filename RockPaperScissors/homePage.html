@@ -10,9 +10,13 @@
 </head>
 
 <body class="background">
-    <h1 id="startUp">How Many Rounds Do You Want To Go?</h1>
-    <input type="text" id="answer">
-    <div class="hidden">
+    <div id="startUp">
+        <h1>How Many Rounds Do You Want To Go?</h1>
+        <input type="text" id="answer" value="">
+        <p id="number"></p>
+        <button onClick="rounds()">Submit</button>
+    </div>
+    <div id="games" class="hidden">
         <p>Player:
         <div id='score'></div>
         </p>
@@ -21,6 +25,9 @@
         </p>
         <p>Ties:
         <div id='ties'></div>
+        </p>
+        <p>Rounds:
+        <div id='rounds'></div>
         </p>
         <h1 id="title">
             Rock Paper Scissors
@@ -39,6 +46,13 @@
                     alt="scissors" width="100" height="110">
             </button>
         </div>
+    </div>
+    <div id="gameOverScreen" class="hidden">
+        <p id="finalPlayer"></p>
+        <p id="finalComp"></p>
+        <h1 id="message"></h1>
+        <button onClick="playAgain()">Play Again</button>
+
     </div>
 </body>
 
