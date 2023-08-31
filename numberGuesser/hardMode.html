@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Number Guesser Hard Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="hardMode.js"></script>
+</head>
+
+<body id = hard-body>
+    <div id="all-contents">
+        <h1>
+            Hard Mode
+
+        </h1>
+        <h2>
+            <a href="homePage.html">Home</a>
+        </h2>
+        <h3> Tries: <div id='tries'></div>
+    </div>
+    <div id="game" class="all-contents">
+        <p>Guess the Random Number between 1-30. You have 10 tries</p>
+        <button onClick="rand()" id="rand">Generate Random Number</button>
+        <div id="randNum" class="hidden"></div>
+        <input type='text' id="guess" value="">
+        <button onClick="guess()">Submit</button>
+        <div id='right'></div>
+    </div>
+    <div id="winner-screen" class="hidden">
+        <h2>What is that insane luck... erm I mean Good Job!</h2>
+        <button onclick="resetGame()">Try Again</button>
+    </div>
+
+    <div id="loser-screen" class="hidden">
+        <h2>ahhhhhh wrong lol.</h2>
+        <p>The number I was thinking of was <span id="correct-number"></span>.</p>
+        <button onclick="resetGame()">Try Again</button>
+    </div>
+
+</body>
+
+</html>
