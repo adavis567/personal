@@ -1,23 +1,46 @@
+/* This changes how the background color looks */
 .background {
     background-color: #607DFF;
+    font-family: 'Quicksand', sans-serif;
 }
+
+/* game and title change the positioning of where all the elements are */
 #game {
-    margin-top: 100px;
-    margin-left: 500px;
+    width: 50%;
+    /* Set a width to the centered element */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
+
 #title {
-    margin-top: 100px;
-    margin-left: 550px;
-    margin-right: 597px;
-    outline: #607DFF solid 8px;;
+    width: 50%;
+    /* Set a width to the centered element */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
+
+/* This hides certain elements until they are called into the code */
 .hidden {
-    display:none
+    display: none
 }
+
+/* These are also for positioning */
 #startUp {
-    margin-left: 400px;
+    width: 50%;
+    /* Set a width to the centered element */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
+
 #gameOverScreen {
-    margin-left: 650px;
-    margin-top: 200px;
+    width: 50%;
+    /* Set a width to the centered element */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+
 }

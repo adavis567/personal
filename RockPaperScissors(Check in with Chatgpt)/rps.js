@@ -1,126 +1,66 @@
-var score = 0
-var computerScore = 0
-var ties = 0
-var games
-var finalScore
-var finalScomp
+//These are the starting variables
+var score = 0;
+var computerScore = 0;
+var ties = 0;
+var games;
+var finalScore;
+var finalScomp;
+//This function gets the number of rounds from the user and then shows the game when a button is pressed
 function rounds() {
-  games = document.getElementById('answer').value
-  document.getElementById('rounds').innerHTML = games
-  document.getElementById('startUp').classList.add('hidden')
-  document.getElementById("games").classList.remove("hidden")
-
+  games = parseInt(document.getElementById('answer').value);
+  document.getElementById('rounds').innerHTML = "Rounds: " + games;
+  document.getElementById('startUp').classList.add('hidden');
+  document.getElementById("games").classList.remove("hidden");
+  updateScores();
 }
-document.getElementById('score').innerHTML = score
-document.getElementById('compScore').innerHTML = computerScore
-document.getElementById('ties').innerHTML = ties
-function rock() {
-  var randNum = Math.ceil(Math.random() * 3)
-  var choice
-  if (randNum === 1) {
-    choice = 'rock'
-  }
-  else if (randNum === 2) {
-    choice = 'paper'
-  }
-  else if (randNum === 3) {
-    choice = 'scissors'
-  }
-  if (choice === 'rock') {
-    alert('tie')
-    ties = ties + 1
-    document.getElementById('ties').innerHTML = ties
-  }
-  else if (choice === 'paper') {
-    alert('loser')
-    computerScore = computerScore + 1
-    document.getElementById('compScore').innerHTML = computerScore
-  }
-  else if (choice === 'scissors') {
-    alert('winner')
-    score = score + 1
-    document.getElementById('score').innerHTML = score
+//After every round, this function is run which updates the scores
+function updateScores() {
+  document.getElementById('score').innerHTML = "Player Score: " + score;
+  document.getElementById('compScore').innerHTML = "Computer Score: " + computerScore;
+  document.getElementById('ties').innerHTML = "Ties: " + ties;
+  document.getElementById("rounds").innerHTML = "Rounds: " + games;
+}
+//This function allows the computer to choose either rock, paper, or scissors
+function getComputerChoice() {
+  var choices = ['rock', 'paper', 'scissors'];
+  var randNum = Math.floor(Math.random() * choices.length);
+  return choices[randNum];
+}
+//This function is ran to see if the computer won or the user won
+function playGame(userChoice) {
+  var computerChoice = getComputerChoice();
 
+  if (userChoice === computerChoice) {
+    // Tie
+    ties++;
+    document.getElementById("result").innerHTML = "Tie"
+  } else if (
+    (userChoice === 'rock' && computerChoice === 'scissors') ||
+    (userChoice === 'paper' && computerChoice === 'rock') ||
+    (userChoice === 'scissors' && computerChoice === 'paper')
+  ) {
+    // User wins
+    score++;
+    document.getElementById("result").innerHTML = "You Won"
+  } else {
+    // Computer wins
+    computerScore++;
+    document.getElementById("result").innerHTML = "You Lost"
   }
-  games = games - 1
-  document.getElementById("rounds").innerHTML = games
+
+  games--;
+  updateScores();
+
   if (games === 0) {
-    gameOver()
+    gameOver();
   }
 }
-function paper() {
-  var randNum = Math.ceil(Math.random() * 3)
-  var choice
-  if (randNum === 1) {
-    choice = 'rock'
-  }
-  else if (randNum === 2) {
-    choice = 'paper'
-  }
-  else if (randNum === 3) {
-    choice = 'scissors'
-  }
-  if (choice === 'rock') {
-    alert('winner')
-    score = score + 1
-    document.getElementById('score').innerHTML = score
-
-  }
-  else if (choice === 'paper') {
-    alert('tie')
-    ties = ties + 1
-    document.getElementById('ties').innerHTML = ties
-  }
-  else if (choice === 'scissors') {
-    alert('loser')
-    computerScore = computerScore + 1
-    document.getElementById('compScore').innerHTML = computerScore
-  }
-  games = games - 1
-  document.getElementById("rounds").innerHTML = games
-  if (games === 0) {
-    gameOver()
-  }
-}
-function scissors() {
-  var randNum = Math.ceil(Math.random() * 3)
-  var choice
-  if (randNum === 1) {
-    choice = 'rock'
-  }
-  else if (randNum === 2) {
-    choice = 'paper'
-  }
-  else if (randNum === 3) {
-    choice = 'scissors'
-  }
-  if (choice === 'rock') {
-    alert('loser')
-    computerScore = computerScore + 1
-    document.getElementById('compScore').innerHTML = computerScore
-  }
-  else if (choice === 'paper') {
-    alert('winner')
-    score = score + 1
-    document.getElementById('score').innerHTML = score
-
-  }
-  else if (choice === 'scissors') {
-    alert('tie')
-    ties = ties + 1
-    document.getElementById('ties').innerHTML = ties
-  }
-  games = games - 1
-  document.getElementById("rounds").innerHTML = games
-}
 
 
-
+//This runs once the game is over and it displays if the user won or if the computer won
 function gameOver() {
   finalScore = score
   finalScomp = computerScore
-  console.log(finalScore)
-  console.log(finalScomp)
   document.getElementById("games").classList.add("hidden")
   document.getElementById("gameOverScreen").classList.remove("hidden")
   document.getElementById("finalPlayer").innerHTML = "Player Score: " + finalScore
@@ -137,6 +77,7 @@ function gameOver() {
     document.getElementById("message").innerHTML = "Its a Tie!"
   }
 }
+//This function allows the user to play again by reloading the page
 function playAgain() {
   location.reload()
 }
