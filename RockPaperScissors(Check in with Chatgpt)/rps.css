@@ -12,7 +12,7 @@
     margin-right: auto;
     text-align: center;
 }
-
+/* This animates the title of the game */
 #title {
     width: 50%;
     /* Set a width to the centered element */
@@ -22,6 +22,7 @@
     position:relative;
     animation-name: title;
     animation-duration: 5s;
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
 @keyframes title {
@@ -53,6 +54,7 @@
     text-align: center;
 
 }
+/* Changes how the input looks when clicked on*/
 input, textarea {
   width: 180px;
   transition: width 1s ease;
@@ -61,6 +63,7 @@ input, textarea {
 input:focus, textarea:focus {
   width: 340px;
 }
+/*Changes how the images look when they are hovered over*/
 img {
     width: 100px;
     height: 110px;
@@ -70,6 +73,7 @@ img:hover {
     width:170px;
     height: 180px
 }
+/* Edits how the buttons look and when they are pressed*/
 #submitButton {
     padding: 15px 20px;
   font-size: 19px;
@@ -107,3 +111,53 @@ img:hover {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
+
+  /* Mobile Responsive*/
+  @media screen and (min-width: 120px) and (max-width: 1080px) {
+    main {
+      height: 100ch;
+      zoom: 1.5;
+      display: grid;
+    }
+
+    h1 {
+      font-size: 44px;
+    }
+
+    h2 {
+      font-size: 42px;
+    }
+
+    h3 {
+      font-size: 36px;
+    }
+
+    #all-contents {
+      height: 100ch;
+      margin: none;
+    }
+
+    a {
+      font-size: 42px;
+    }
+
+    .sidebar {
+      margin-right: 0px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sidebar-img {
+      width: 100%;
+    }
+
+    p,
+    li {
+      font-size: 24px;
+    }
+
+    .content {
+      align-content: center;
+      justify-content: center;
+    }
+}

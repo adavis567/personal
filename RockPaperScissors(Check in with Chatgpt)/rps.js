@@ -79,5 +79,25 @@ function gameOver() {
 }
 //This function allows the user to play again by reloading the page
 function playAgain() {
-  location.reload()
+  resetGame()
+}
+
+function resetGame() {
+   // Reset all variables to their initial values
+   score = 0;
+   computerScore = 0;
+   ties = 0;
+   games = 0;
+   finalScore = 0;
+   finalScomp = 0;
+ 
+   // Update the UI to reflect the reset values
+   updateScores();
+   document.getElementById("result").innerHTML = "";
+   document.getElementById("answer").value = "";
+ 
+   // Show the start screen and hide other screens
+   document.getElementById("startUp").classList.remove("hidden");
+   document.getElementById("games").classList.add("hidden");
+   document.getElementById("gameOverScreen").classList.add("hidden");
 }
