@@ -1,8 +1,9 @@
-body {
-    background-color: rgb(140, 192, 240)
+#homeBody {
+    background-image: url(numberGuesserImages/numbers2.gif);
 }
 
 #all-contents {
+    background-color:darkred;
     font-family: Georgia, 'Times New Roman', Times, serif;
     max-width: 300px;
     margin: auto;
@@ -19,6 +20,7 @@ body {
 #difficulty {
     max-width: 300px;
     margin: auto;
+    background-color:darkred;
 }
 
 .hidden {
@@ -31,6 +33,9 @@ body {
 
 #loser-screen {
     margin-left: 560px;
+}
+#easyBody {
+    background-color: rgb(140, 192, 240)
 }
 #medium-body {
     background-color: blueviolet;
