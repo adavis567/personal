@@ -19,6 +19,16 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    position:relative;
+    animation-name: title;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+@keyframes title {
+    0%   { left:0px; }
+    25% { left:100px; }
+    75% { left:-100px;}
+    100%{left:0px;}
 }
 
 /* This hides certain elements until they are called into the code */
@@ -42,5 +52,58 @@
     margin-right: auto;
     text-align: center;
 
-
 }
+input, textarea {
+  width: 180px;
+  transition: width 1s ease;
+}
+
+input:focus, textarea:focus {
+  width: 340px;
+}
+img {
+    width: 100px;
+    height: 110px;
+    transition: width 2s, height 2s;
+}
+img:hover {
+    width:170px;
+    height: 180px
+}
+#submitButton {
+    padding: 15px 20px;
+  font-size: 19px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color:darkmagenta;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px #999;
+}
+
+#submitButton:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  #playAgain {
+    padding: 15px 20px;
+  font-size: 19px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color:darkmagenta;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px #999;
+}
+
+#playAgain:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
