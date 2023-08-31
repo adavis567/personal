@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Number Guesser Insane Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="insaneMode.js"></script>
+</head>
+
+<body id = insane-body>
+    <div id="all-contents">
+        <h1>
+            Insane Mode
+
+        </h1>
+        <h2>
+            <a href="homePage.html">Home</a>
+        </h2>
+        <h3> Tries: <div id='tries'></div>
+    </div>
+    <div id="game" class="all-contents">
+        <p>Oh Jesus. WHat NumBeR between 1 and 100 would I choose? You get 50 tries. Good Luck.</p>
+        <button onClick="rand()" id="rand">Generate Random Number</button>
+        <div id="randNum" class="hidden"></div>
+        <input type='text' id="guess" value="">
+        <button onClick="guess()">Submit</button>
+        <div id='right'></div>
+    </div>
+    <div id="winner-screen" class="hidden">
+        <h2>Ok you have some skill. You can guess a number between 1 and who cares.</h2>
+        <button onclick="resetGame()">Try Again</button>
+    </div>
+
+    <div id="loser-screen" class="hidden">
+        <h2>Well we all saw this coming.  </h2>
+        <p>did you really think that you could guess that the number was <span id="correct-number"></span>.</p>
+        <button onclick="resetGame()">Try Again</button>
+    </div>
+
+</body>
+
+</html>
