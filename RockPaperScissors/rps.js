@@ -77,7 +77,7 @@ function gameOver() {
     document.getElementById("message").innerHTML = "Its a Tie!"
   }
 }
-//This function allows the user to play again by reloading the page
+//This function allows the user to play again by resetting all values
 function playAgain() {
   resetGame()
 }
@@ -90,7 +90,6 @@ function resetGame() {
    games = 0;
    finalScore = 0;
    finalScomp = 0;
- 
    // Update the UI to reflect the reset values
    updateScores();
    document.getElementById("result").innerHTML = "";
