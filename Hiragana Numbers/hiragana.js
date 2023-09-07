@@ -1,4 +1,4 @@
-var hiragana = ["'Rei'", "'Ichi'", "'Ni'", "'San'", "'Yon'", "'Go'","'Roku'","'Nana'","'Hachi'","'Kyu'","'Juu'"]
+var hiragana = ["'Rei'", "'Ichi'", "'Ni'", "'San'", "'Yon'", "'Go'","'Roku'","'Nana'","'Hachi'","'Kyu'","'Juu'","'Juu Ichi'","'Juu Ni'","'Juu San'","'Juu Yon'","'Juu Go'","'Juu Roku'","'Juu Nana'","'Juu Hachi'","'Juu Kyu'","'Ni Juu'"]
 var word
 function toWords(num) {
     num = document.getElementById("number").value
