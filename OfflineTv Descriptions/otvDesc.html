@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Offline TV Descriptions
+    </title>
+    <link rel="stylesheet" href="otvDesc.css">
+    <script src="otvDesc.js"></script>
+</head>
+
+<body>
+    <div id="welcome">
+        <h1>
+            Welcome to Offline TV Descriptions<br>
+            Choose Descriptions or Quiz
+        </h1>
+    </div>
+    <div id="selection">
+        <button onClick="descriptions()">Descriptions</button>
+        <button onClick="quiz()">Quiz</button>
+    </div>
+    <div id="descriptions" class="hidden">
+        <button onClick="home()">Home</button><br>
+       Welcome To Descriptions<br>
+       Which Otv Member would you like to know about?<br>
+       <input type="text" id="member" value="" placeholder="Type a Name">
+       <button onClick="getMemberInfo()">Submit</button>
+    </div>
+    <div id="quiz" class="hidden">
+        <button onClick="home()">Home</button><br>
+        Ready to Test your Knowledge?<br>
+        <button onClick="start()">Start</button>
+    </div>
+</body>
+
+</html>
