@@ -1,3 +1,15 @@
 .hidden {
     display:none
 }
+body {
+    background-color: antiquewhite;
+}
+#welcome {
+    background-color:cadetblue;
+    text-align: center;
+}
+#selection {
+    width: 50%;
+    margin-left: auto;
+    
+}

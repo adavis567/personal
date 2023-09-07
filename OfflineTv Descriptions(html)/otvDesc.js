@@ -50,4 +50,6 @@ function home() {
     document.getElementById("quiz").classList.add("hidden")
     document.getElementById("welcome").classList.remove("hidden")
     document.getElementById("selection").classList.remove("hidden")
+    document.getElementById("memberInfo").innerHTML = ""
+    document.getElementById("memberSelect").value= "placeholder"
 }
