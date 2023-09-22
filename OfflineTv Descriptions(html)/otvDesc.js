@@ -1,3 +1,7 @@
+
+
+
+
 var rae = {
     "height": "short",
     "personality": "excited",
@@ -102,5 +106,11 @@ function removePhotos(person) {
     }
 }
 
+function start() {
+    document.getElementById("quizStart").classList.add("hidden")
+    document.getElementById("score").classList.remove("hidden")
+    document.getElementById("question7").classList.remove("hidden")
+    document.getElementById("question7").innerHTML = toast
+}
 
 
