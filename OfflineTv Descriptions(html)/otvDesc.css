@@ -7,9 +7,10 @@ body {
 #welcome {
     background-color:cadetblue;
     text-align: center;
+    width: 50%;
+    margin: auto;
 }
 #selection {
-    width: 50%;
-    margin-left: auto;
+    text-align: center;
     
 }
