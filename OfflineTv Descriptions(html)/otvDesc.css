@@ -1,20 +1,72 @@
 .hidden {
-    display:none
+    display: none
 }
+
 body {
     background-color: antiquewhite;
 }
+
 #welcome {
-    background-color:cadetblue;
+    background-color: cadetblue;
     text-align: center;
     width: 50%;
     margin: auto;
 }
+
 #selection {
     text-align: center;
 }
+
 #descriptions {
     width: 50%;
     margin: auto;
     text-align: center;
+    font-size: larger;
+    text-transform: capitalize;
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 10px;
+    font-size: 19px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #f7f1f1;
+    background-color: mediumvioletred;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 4px 4px #999;
+}
+
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#raePhoto {
+    border: 8px solid red
+}
+
+#sykPhoto {
+    border: 8px solid #129409
+}
+
+#toastPhoto {
+    border: 8px solid #098494
+}
+
+#descHome {
+    margin-bottom: 20px;
+}
+
+#memberSelect {
+    margin-bottom: 30px;
 }

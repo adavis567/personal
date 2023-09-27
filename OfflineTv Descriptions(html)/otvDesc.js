@@ -1,7 +1,3 @@
-
-
-
-
 var rae = {
     "height": "short",
     "personality": "excited",
@@ -17,7 +13,7 @@ var syk = {
 var toast = {
     "height": "regular",
     "personality": "gigachad",
-    "description": "Dsg amongus guy",
+    "description": "DSG amongus guy",
 }
 
 function getMemberInfo() {
@@ -109,7 +105,18 @@ function removePhotos(person) {
 function start() {
     document.getElementById("quizStart").classList.add("hidden")
     document.getElementById("score").classList.remove("hidden")
-    document.getElementById("question7").classList.remove("hidden")
+    document.getElementById("question1").classList.remove("hidden")
 }
-
-
+function checkAnswer1() {
+    var answer1 = document.getElementById("guess1").value
+    if (answer1==='toast') {
+        alert("yay")
+        document.getElementById("quest2").classList.remove("hidden")
+    }
+    else {
+        alert('no')
+    }
+}
+function enter() {
+    checkAnswer1()
+}
