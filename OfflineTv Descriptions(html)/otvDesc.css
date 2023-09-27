@@ -12,5 +12,9 @@ body {
 }
 #selection {
     text-align: center;
-    
+}
+#descriptions {
+    width: 50%;
+    margin: auto;
+    text-align: center;
 }
