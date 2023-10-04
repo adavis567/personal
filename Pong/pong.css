@@ -1,0 +1,35 @@
+body {
+    background-color: blue;
+}
+#gameArea {
+    width: 800px;
+    height: 800px;
+    border: 1px solid white;
+    background-color: black;
+    position: relative;
+    margin: auto;
+}
+#player1 {
+    background-color: brown;
+    width:25px;
+    height:180px;
+    position:absolute;
+    top:300px
+}
+#ball {
+    background-color: aliceblue;
+    width:15px;
+    height:15px;
+    border-radius: 15px;
+    left:400px;
+    top:0px;
+    position:absolute
+}
+#player2 {
+    background-color:cadetblue;
+    width: 25px;
+    height:180px;
+    position:absolute;
+    left:775px;
+    top:300px;
+}
