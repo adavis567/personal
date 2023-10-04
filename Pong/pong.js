@@ -33,9 +33,9 @@ function runProgram() {
     }
     var walls = {
         "leftWall": 0,
-        "rightWall": $("#board").width() - 50,
+        "rightWall": $("#gameArea").width() - 50,
         "topWall": 0,
-        "bottomWall": $("#board").height() - 50
+        "bottomWall": $("#gameArea").height() - 180
     }
 
     var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);
@@ -48,6 +48,7 @@ function runProgram() {
 
     function newFrame() {
         repositionGameItem()
+        wallCollision()
         redrawGameItem()
     }
 
@@ -64,7 +65,7 @@ function runProgram() {
         if (event.which === KEY.W) {
             player1["y-speed"] = 0
         }
-        else if(event.which === KEY.S) {
+        else if (event.which === KEY.S) {
             player1["y-speed"] = 0
         }
     }
@@ -90,4 +91,15 @@ function runProgram() {
     function redrawGameItem() {
         $("#player1").css("top", player1["y-coordinate"])
     }
+
+    function wallCollision() {
+        if (walls.topWall >= player1["y-coordinate"]) {
+            player1["y-coordinate"] = 0
+        }
+        else if (walls.bottomWall <= player1["y-coordinate"]) {
+            player1["y-coordinate"] = walls.bottomWall
+        }
+
+    }
+    console.log(walls.bottomWall)
 }
