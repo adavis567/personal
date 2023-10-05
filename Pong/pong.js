@@ -15,7 +15,6 @@ function runProgram() {
         "S": 83,
         "UP": 38,
         "DOWN": 40,
-        "SPACE": 32
     }
 
     var player1 = {
@@ -51,7 +50,6 @@ function runProgram() {
     function newFrame() {
         repositionGameItem()
         wallCollision()
-        paddleCollision()
         redrawGameItem()
     }
 
@@ -67,10 +65,6 @@ function runProgram() {
         }
         else if (event.which === KEY.DOWN) {
             player2["y-speed"] = 5
-        }
-        if (event.which === KEY.SPACE) {
-            ball["x-speed"] = 5
-            ball["y-speed"] = 5
         }
     }
 
@@ -105,16 +99,11 @@ function runProgram() {
     function repositionGameItem() {
         player1["y-coordinate"] += player1["y-speed"]
         player2["y-coordinate"] += player2["y-speed"]
-        ball["x-coordinate"] += ball["x-speed"]
-        ball["y-coordinate"] += ball["y-speed"]
-
     }
 
     function redrawGameItem() {
         $("#player1").css("top", player1["y-coordinate"])
         $("#player2").css("top", player2["y-coordinate"])
-        $("#ball").css("left", ball["x-coordinate"])
-        $("#ball").css("top", ball["y-coordinate"])
     }
 
     function wallCollision() {
@@ -130,23 +119,5 @@ function runProgram() {
         else if (walls.bottomWall <= player2["y-coordinate"]) {
             player2["y-coordinate"] = walls.bottomWall
         }
-        
-
-       
-
-    }
-
-    function paddleCollision() {
-        if (player1["y-coordinate"] === ball["x-coordinate"]) {
-            ball["x-coordinate"] -= ball["x-speed"]
-            ball["y-coordinate"] -= ball["y-speed"]
-        }
-        else if (walls.rightWall <= ball["x-coordinate"]) {
-            ball["x-coordinate"] -= ball["x-speed"]
-            ball["y-coordinate"] -= ball["y-speed"]
-        }
-        else if (walls.bottomWall <= ball["y-coordinate"]) {
-            ball["y-speed"] *= 1
         }
     }
-}
