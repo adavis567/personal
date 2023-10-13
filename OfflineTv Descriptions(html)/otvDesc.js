@@ -115,8 +115,15 @@ function checkAnswer1() {
     }
     else {
         alert('no')
+        document.getElementById("quest2").classList.remove("hidden")
+        document.getElementById("score")
     }
 }
-function enter() {
+
+function enter1() {
     checkAnswer1()
+}
+
+function question2() {
+    document.getElementById("question2").classList.remove("hidden")
 }
