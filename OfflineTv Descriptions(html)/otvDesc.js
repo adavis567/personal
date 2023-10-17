@@ -125,5 +125,6 @@ function enter1() {
 }
 
 function question2() {
+    document.getElementById("question1").classList.add("hidden")
     document.getElementById("question2").classList.remove("hidden")
 }
