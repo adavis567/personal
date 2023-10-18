@@ -102,9 +102,12 @@ function removePhotos(person) {
     }
 }
 
+var score = 1
+score = document.getElementById("score").innerHTML
+
 function start() {
     document.getElementById("quizStart").classList.add("hidden")
-    document.getElementById("score").classList.remove("hidden")
+    document.getElementById("scoreboard").classList.remove("hidden")
     document.getElementById("question1").classList.remove("hidden")
 }
 function checkAnswer1() {
