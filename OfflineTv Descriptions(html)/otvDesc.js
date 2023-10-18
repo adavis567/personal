@@ -102,8 +102,7 @@ function removePhotos(person) {
     }
 }
 
-var score = 1
-score = document.getElementById("score").innerHTML
+var score = document.getElementById('scoring').innerHTML
 
 function start() {
     document.getElementById("quizStart").classList.add("hidden")
@@ -119,7 +118,6 @@ function checkAnswer1() {
     else {
         alert('no')
         document.getElementById("quest2").classList.remove("hidden")
-        document.getElementById("score")
     }
 }
 
