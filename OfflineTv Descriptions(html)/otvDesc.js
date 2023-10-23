@@ -6,7 +6,7 @@ var rae = {
 
 var syk = {
     "height": "tall",
-    "personality": "a sicko",
+    "personality": "absolute sicko",
     "description": "trollkkuno"
 }
 
@@ -101,8 +101,7 @@ function removePhotos(person) {
 
     }
 }
-
-var score = document.getElementById('scoring').innerHTML
+var score = 0
 
 function start() {
     document.getElementById("quizStart").classList.add("hidden")
@@ -110,10 +109,14 @@ function start() {
     document.getElementById("question1").classList.remove("hidden")
 }
 function checkAnswer1() {
+    document.getElementById("scoring").innerHTML = score + "/3"
     var answer1 = document.getElementById("guess1").value
     if (answer1==='toast') {
         alert("yay")
         document.getElementById("quest2").classList.remove("hidden")
+        score++
+        document.getElementById("scoring").innerHTML = score + "/3"
+        return score
     }
     else {
         alert('no')
@@ -121,11 +124,24 @@ function checkAnswer1() {
     }
 }
 
+function checkAnswer2() {
+    var answer2 = document.getElementById("guess2").value
+    if 
+}
+
 function enter1() {
     checkAnswer1()
+}
+
+function enter2() {
+    checkAnswer2()
 }
 
 function question2() {
     document.getElementById("question1").classList.add("hidden")
     document.getElementById("question2").classList.remove("hidden")
+}
+
+function question3() {
+
 }
