@@ -1,3 +1,5 @@
+// Dictionary Entries
+
 var rae = {
     "height": "short",
     "personality": "excited",
@@ -15,6 +17,31 @@ var toast = {
     "personality": "gigachad",
     "description": "DSG amongus guy",
 }
+
+function descriptionHome() {
+    document.getElementById("descriptions").classList.add("hidden")
+    document.getElementById("quiz").classList.add("hidden")
+    document.getElementById("welcome").classList.remove("hidden")
+    document.getElementById("selection").classList.remove("hidden")
+    document.getElementById("memberInfo").innerHTML = ""
+    document.getElementById("memberSelect").value = "placeholder"
+    removePhotos('all')
+}
+
+function quizHome() {
+    document.getElementById("descriptions").classList.add("hidden")
+    document.getElementById("quiz").classList.add("hidden")
+    document.getElementById("welcome").classList.remove("hidden")
+    document.getElementById("selection").classList.remove("hidden")
+    document.getElementById("finishScreen").classList.add("hidden")
+}
+function quiz() {
+    document.getElementById("quiz").classList.remove("hidden")
+    document.getElementById("welcome").classList.add("hidden")
+    document.getElementById("selection").classList.add("hidden")
+}
+
+// Descriptions Code
 
 function getMemberInfo() {
     var member
@@ -42,21 +69,9 @@ function descriptions() {
     document.getElementById("selection").classList.add("hidden")
 }
 
-function quiz() {
-    document.getElementById("quiz").classList.remove("hidden")
-    document.getElementById("welcome").classList.add("hidden")
-    document.getElementById("selection").classList.add("hidden")
-}
 
-function home() {
-    document.getElementById("descriptions").classList.add("hidden")
-    document.getElementById("quiz").classList.add("hidden")
-    document.getElementById("welcome").classList.remove("hidden")
-    document.getElementById("selection").classList.remove("hidden")
-    document.getElementById("memberInfo").innerHTML = ""
-    document.getElementById("memberSelect").value = "placeholder"
-    removePhotos('all')
-}
+
+
 
 function showPhoto(person) {
     var photo
@@ -102,13 +117,18 @@ function removePhotos(person) {
     }
 }
 
+// Quiz Code
+
 var score = 0
+
+
 
 function start() {
     document.getElementById("quizStart").classList.add("hidden")
     document.getElementById("scoreboard").classList.remove("hidden")
     document.getElementById("question1").classList.remove("hidden")
 }
+
 function checkAnswer1() {
     document.getElementById("scoring").innerHTML = score + "/3"
     var answer1 = document.getElementById("guess1").value
@@ -141,17 +161,17 @@ function checkAnswer2() {
 }
 
 function checkAnswer3() {
-var answer3 = document.getElementById("guess3").value
-if (answer3 === 'valkyrae') {
-    alert("yay")
-    document.getElementById("done").classList.remove("hidden")
-    score++
-    document.getElementById("scoring").innerHTML = score + "/3"
-}
-else {
-    alert('no')
-    document.getElementById("done").classList.remove("hidden")
-}
+    var answer3 = document.getElementById("guess3").value
+    if (answer3 === 'valkyrae') {
+        alert("yay")
+        document.getElementById("done").classList.remove("hidden")
+        score++
+        document.getElementById("scoring").innerHTML = score + "/3"
+    }
+    else {
+        alert('no')
+        document.getElementById("done").classList.remove("hidden")
+    }
 }
 
 
@@ -181,5 +201,6 @@ function finish() {
     document.getElementById("question3").classList.add("hidden")
     document.getElementById("finishScreen").classList.remove("hidden")
     document.getElementById("scoring").classList.add("hidden")
-    document.getElementById("finishScreen").innerHTML = "Congrats, You Got A " + score + "/3"
+    document.getElementById("message").innerHTML = "Congrats, You Got A " + score + "/3"
+    document.getElementById("home2").classList.remove("hidden")
 }

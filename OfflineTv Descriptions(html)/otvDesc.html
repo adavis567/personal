@@ -22,7 +22,7 @@
         <button onClick="quiz()">Quiz</button>
     </div>
     <div id="descriptions" class="hidden">
-        <button onClick="home()" id="descHome">Home</button><br>
+        <button onClick="descriptionHome()" id="descHome">Home</button><br>
         Welcome To Descriptions<br>
         Which Otv Member would you like to know about?<br>
         <select id="memberSelect" name="members">
@@ -75,9 +75,11 @@
             <button onClick="finish()" class="hidden" id="done">Finish Quiz</button>
         </div>
         <div id="finishScreen" class="hidden">
-
+            <div id="message"></div>
+            <button onClick="quizHome()" id="home2">Home</button>
         </div>
     </div>
+    
     <img src="otvPhotos/Valkyrae.jpeg" alt="Valkyrae" id="raePhoto" class="hidden">
     <img src="otvPhotos/Sykkuno.jpeg" alt="Sykkuno" id="sykPhoto" class="hidden">
     <img src="otvPhotos/Toast.webp" alt="Toast" id="toastPhoto" class="hidden" width="225px">
