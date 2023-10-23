@@ -101,6 +101,7 @@ function removePhotos(person) {
 
     }
 }
+
 var score = 0
 
 function start() {
@@ -111,7 +112,7 @@ function start() {
 function checkAnswer1() {
     document.getElementById("scoring").innerHTML = score + "/3"
     var answer1 = document.getElementById("guess1").value
-    if (answer1==='toast') {
+    if (answer1 === 'toast') {
         alert("yay")
         document.getElementById("quest2").classList.remove("hidden")
         score++
@@ -126,8 +127,33 @@ function checkAnswer1() {
 
 function checkAnswer2() {
     var answer2 = document.getElementById("guess2").value
-    if 
+    if (answer2 === 'sykkuno') {
+        alert("yay")
+        document.getElementById("quest3").classList.remove("hidden")
+        score++
+        document.getElementById("scoring").innerHTML = score + "/3"
+        return score
+    }
+    else {
+        alert('no')
+        document.getElementById("quest3").classList.remove("hidden")
+    }
 }
+
+function checkAnswer3() {
+var answer3 = document.getElementById("guess3").value
+if (answer3 === 'valkyrae') {
+    alert("yay")
+    document.getElementById("done").classList.remove("hidden")
+    score++
+    document.getElementById("scoring").innerHTML = score + "/3"
+}
+else {
+    alert('no')
+    document.getElementById("done").classList.remove("hidden")
+}
+}
+
 
 function enter1() {
     checkAnswer1()
@@ -137,11 +163,23 @@ function enter2() {
     checkAnswer2()
 }
 
+function enter3() {
+    checkAnswer3()
+}
+
 function question2() {
     document.getElementById("question1").classList.add("hidden")
     document.getElementById("question2").classList.remove("hidden")
 }
 
 function question3() {
+    document.getElementById("question2").classList.add("hidden")
+    document.getElementById("question3").classList.remove("hidden")
+}
 
+function finish() {
+    document.getElementById("question3").classList.add("hidden")
+    document.getElementById("finishScreen").classList.remove("hidden")
+    document.getElementById("scoring").classList.add("hidden")
+    document.getElementById("finishScreen").innerHTML = "Congrats, You Got A " + score + "/3"
 }
