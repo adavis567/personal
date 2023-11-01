@@ -64,6 +64,10 @@ img {
     border: 8px solid #098494
 }
 
+#corpsePhoto {
+    border: 8px solid purple
+}
+
 #descHome {
     margin-bottom: 20px;
 }

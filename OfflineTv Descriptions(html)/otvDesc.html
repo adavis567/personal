@@ -30,6 +30,7 @@
             <option value="rae">Rae</option>
             <option value="syk">Syk</option>
             <option value="toast">Toast</option>
+            <option value="corpse">Corpse</option>
         </select>
         <button onClick="getMemberInfo()">Submit</button>
         <div id="memberInfo">
@@ -47,7 +48,15 @@
         </div>
 
         <div id="scoreboard" class="hidden">
-            <div id="scoring">0/3</div>
+            <div id="scoring">0/4</div>
+        </div>
+        <div id="question1" class="hidden" alt="Corpse">
+            Who does this describe?<br>
+            Height: Tallest<br>
+            Personality: Cool<br>
+            Description: Anyone wanna play muck?<br>
+            <input type="text" id="guess1" value=""><button onClick="enter1()">Enter</button>
+            <button onClick="question2()" class="hidden" id="quest2">Next Question</button>
         </div>
         <div id="question1" class="hidden" alt="Toast">
             Who does this describe?<br>
@@ -80,9 +89,10 @@
         </div>
     </div>
     
-    <img src="otvPhotos/Valkyrae.jpeg" alt="Valkyrae" id="raePhoto" class="hidden">
-    <img src="otvPhotos/Sykkuno.jpeg" alt="Sykkuno" id="sykPhoto" class="hidden">
-    <img src="otvPhotos/Toast.webp" alt="Toast" id="toastPhoto" class="hidden" width="225px">
+    <img src="otvPhotos/Valkyrae.jpeg" alt="Valkyrae" id="raePhoto" class="hidden" height="225px" width="225px">
+    <img src="otvPhotos/Sykkuno.jpeg" alt="Sykkuno" id="sykPhoto" class="hidden" height="225px" width="225px">
+    <img src="otvPhotos/Toast.webp" alt="Toast" id="toastPhoto" class="hidden" height="225px" width="225px">
+    <img src="otvPhotos/corpse.jpeg" alt="Corpse" id="corpsePhoto" class="hidden" height="180px" width="225px">
 </body>
 
 </html>

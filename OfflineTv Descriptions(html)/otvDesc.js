@@ -18,6 +18,12 @@ var toast = {
     "description": "DSG amongus guy",
 }
 
+var corpse = {
+    "height": "tallest",
+    "personality": "cool",
+    "description": "anyone wanna play muck?",
+}
+
 function descriptionHome() {
     document.getElementById("descriptions").classList.add("hidden")
     document.getElementById("quiz").classList.add("hidden")
@@ -63,6 +69,11 @@ function getMemberInfo() {
             toast.personality + ", " + toast.description
         showPhoto("toast")
     }
+    else if (member === "corpse") {
+        document.getElementById("memberInfo").innerHTML = "Corpse is the " + corpse.height + ", " +
+         corpse.personality + "est person who likes to say, " + corpse.description
+         showPhoto("corpse")
+    }
 }
 
 function descriptions() {
@@ -95,6 +106,12 @@ function showPhoto(person) {
         document.getElementById("memberPhoto").innerHTML = photo
         removePhotos('toast')
     }
+    else if (person === "corpse") {
+        photo = document.getElementById("corpsePhoto").innerHTML
+        document.getElementById("corpsePhoto").classList.remove("hidden")
+        document.getElementById("memberPhoto").innerHTML = photo
+        removePhotos('corpse')
+    }
 }
 
 function removePhotos(person) {
@@ -102,20 +119,28 @@ function removePhotos(person) {
         document.getElementById("raePhoto").classList.add("hidden")
         document.getElementById("sykPhoto").classList.add("hidden")
         document.getElementById("toastPhoto").classList.add("hidden")
+        document.getElementById("corpsePhoto").classList.add("hidden")
     }
     if (person === 'rae') {
         document.getElementById("sykPhoto").classList.add("hidden")
         document.getElementById("toastPhoto").classList.add("hidden")
+        document.getElementById("corpsePhoto").classList.add("hidden")
 
     }
     else if (person === 'syk') {
         document.getElementById("raePhoto").classList.add("hidden")
         document.getElementById("toastPhoto").classList.add("hidden")
+        document.getElementById("corpsePhoto").classList.add("hidden")
     }
     else if (person === 'toast') {
         document.getElementById("raePhoto").classList.add("hidden")
         document.getElementById("sykPhoto").classList.add("hidden")
-
+        document.getElementById("corpsePhoto").classList.add("hidden")
+    }
+    else if (person === "corpse") {
+        document.getElementById("raePhoto").classList.add("hidden")
+        document.getElementById("sykPhoto").classList.add("hidden")
+        document.getElementById("toastPhoto").classList.add("hidden")
     }
 }
 
