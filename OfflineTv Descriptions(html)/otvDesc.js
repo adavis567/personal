@@ -28,12 +28,14 @@ function descriptionHome() {
     removePhotos('all')
 }
 
-function quizHome() {
-    document.getElementById("descriptions").classList.add("hidden")
+function home() {
     document.getElementById("quiz").classList.add("hidden")
     document.getElementById("welcome").classList.remove("hidden")
     document.getElementById("selection").classList.remove("hidden")
-    document.getElementById("finishScreen").classList.add("hidden")
+}
+
+function quizHome() {
+    location.reload()
 }
 function quiz() {
     document.getElementById("quiz").classList.remove("hidden")
@@ -52,12 +54,12 @@ function getMemberInfo() {
         showPhoto("rae")
     }
     else if (member === "syk") {
-        document.getElementById("memberInfo").innerHTML = "Syk is " + syk.height + ", " +
+        document.getElementById("memberInfo").innerHTML = "Syk is " + syk.height + ", an " +
             syk.personality + ", and " + syk.description;
         showPhoto("syk")
     }
     else if (member === "toast") {
-        document.getElementById("memberInfo").innerHTML = "Toast is a " + toast.height + ", " +
+        document.getElementById("memberInfo").innerHTML = "Toast is the " + toast.height + ", " +
             toast.personality + ", " + toast.description
         showPhoto("toast")
     }
