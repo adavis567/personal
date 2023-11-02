@@ -71,7 +71,7 @@ function getMemberInfo() {
     }
     else if (member === "corpse") {
         document.getElementById("memberInfo").innerHTML = "Corpse is the " + corpse.height + ", " +
-         corpse.personality + "est person who likes to say, " + corpse.description
+         corpse.personality + "est person who just wants to know if , " + corpse.description
          showPhoto("corpse")
     }
 }
