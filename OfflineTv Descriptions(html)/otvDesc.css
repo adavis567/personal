@@ -76,6 +76,10 @@ img {
     border: 8px solid orange
 }
 
+#evonPhoto {
+    border: 8px solid yellow
+}
+
 #descHome {
     margin-bottom: 20px;
 }
