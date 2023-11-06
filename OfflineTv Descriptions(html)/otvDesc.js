@@ -113,6 +113,11 @@ function getMemberInfo() {
             + leslie.personality + ", and some people know her as the " + leslie.description
         showPhoto("leslie")
     }
+    else if (member === "evon") {
+        document.getElementById("memberInfo").innerHTML = "Evon is " + evon.height + ", she has "
+        + evon.personality + " in her blood and this makes her a " + evon.description
+        showPhoto("evon")
+    }
 }
 
 function showPhoto(person) {
@@ -153,6 +158,12 @@ function showPhoto(person) {
         document.getElementById("memberPhoto").innerHTML = photo
         removePhotos('leslie')
     }
+    else if (person === "evon") {
+        photo = document.getElementById("evonPhoto").innerHTML
+        document.getElementById("evonPhoto").classList.remove("hidden")
+        document.getElementById("memberPhoto").innerHTML = photo
+        removePhotos('evon')
+}
 }
 
 function removePhotos(person) {
@@ -163,6 +174,7 @@ function removePhotos(person) {
         document.getElementById("corpsePhoto").classList.add("hidden")
         document.getElementById("miyoungPhoto").classList.add("hidden")
         document.getElementById("lesliePhoto").classList.add("hidden")
+        document.getElementById("evonPhoto").classList.add("hidden")
     }
     if (person === 'rae') {
         document.getElementById("sykPhoto").classList.add("hidden")
@@ -170,6 +182,7 @@ function removePhotos(person) {
         document.getElementById("corpsePhoto").classList.add("hidden")
         document.getElementById("miyoungPhoto").classList.add("hidden")
         document.getElementById("lesliePhoto").classList.add("hidden")
+        document.getElementById("evonPhoto").classList.add("hidden")
 
     }
     else if (person === 'syk') {
@@ -178,6 +191,7 @@ function removePhotos(person) {
         document.getElementById("corpsePhoto").classList.add("hidden")
         document.getElementById("miyoungPhoto").classList.add("hidden")
         document.getElementById("lesliePhoto").classList.add("hidden")
+        document.getElementById("evonPhoto").classList.add("hidden")
     }
     else if (person === 'toast') {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -185,6 +199,7 @@ function removePhotos(person) {
         document.getElementById("corpsePhoto").classList.add("hidden")
         document.getElementById("miyoungPhoto").classList.add("hidden")
         document.getElementById("lesliePhoto").classList.add("hidden")
+        document.getElementById("evonPhoto").classList.add("hidden")
     }
     else if (person === "corpse") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -192,6 +207,7 @@ function removePhotos(person) {
         document.getElementById("toastPhoto").classList.add("hidden")
         document.getElementById("miyoungPhoto").classList.add("hidden")
         document.getElementById("lesliePhoto").classList.add("hidden")
+        document.getElementById("evonPhoto").classList.add("hidden")
     }
     else if (person === "miyoung") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -199,6 +215,7 @@ function removePhotos(person) {
         document.getElementById("toastPhoto").classList.add("hidden")
         document.getElementById("corpsePhoto").classList.add("hidden")
         document.getElementById("lesliePhoto").classList.add("hidden")
+        document.getElementById("evonPhoto").classList.add("hidden")
     }
     else if (person === "leslie") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -206,6 +223,15 @@ function removePhotos(person) {
         document.getElementById("toastPhoto").classList.add("hidden")
         document.getElementById("corpsePhoto").classList.add("hidden")
         document.getElementById("miyoungPhoto").classList.add("hidden")
+        document.getElementById("evonPhoto").classList.add("hidden")
+    }
+    else if (person === "evon") {
+        document.getElementById("raePhoto").classList.add("hidden")
+        document.getElementById("sykPhoto").classList.add("hidden")
+        document.getElementById("toastPhoto").classList.add("hidden")
+        document.getElementById("corpsePhoto").classList.add("hidden")
+        document.getElementById("miyoungPhoto").classList.add("hidden")
+        document.getElementById("lesliePhoto").classList.add("hidden")
     }
 }
 
