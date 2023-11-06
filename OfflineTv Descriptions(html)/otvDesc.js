@@ -24,6 +24,24 @@ var corpse = {
     "description": "anyone wanna play muck?",
 }
 
+var miyoung = {
+    "height": "dunno",
+    "personality": "psychotic",
+    "description": "absolute hentai degenerate"
+}
+
+var leslie = {
+    "height": "tall",
+    "personality": "sheeeeeesh",
+    "description": "guitar girl"
+}
+
+var evon = {
+    "height": "short",
+    "personality": "starbucks",
+    "description": "pleb gremlin"
+}
+
 // Startup Functions
 
 function descriptions() {
@@ -85,6 +103,11 @@ function getMemberInfo() {
             corpse.personality + "est person who just wants to know if , " + corpse.description
         showPhoto("corpse")
     }
+    else if (member === "miyoung") {
+        document.getElementById("memberInfo").innerHTML = "Miyoung is " + miyoung.height + " inches tall, "
+            + miyoung.personality + ", and an " + miyoung.description
+        showPhoto("miyoung")
+    }
 }
 
 function showPhoto(person) {
@@ -113,6 +136,12 @@ function showPhoto(person) {
         document.getElementById("memberPhoto").innerHTML = photo
         removePhotos('corpse')
     }
+    else if (person === "miyoung") {
+        photo = document.getElementById("miyoungPhoto").innerHTML
+        document.getElementById("miyoungPhoto").classList.remove("hidden")
+        document.getElementById("memberPhoto").innerHTML = photo
+        removePhotos('miyoung')
+    }
 }
 
 function removePhotos(person) {
@@ -121,27 +150,38 @@ function removePhotos(person) {
         document.getElementById("sykPhoto").classList.add("hidden")
         document.getElementById("toastPhoto").classList.add("hidden")
         document.getElementById("corpsePhoto").classList.add("hidden")
+        document.getElementById("miyoungPhoto").classList.add("hidden")
     }
     if (person === 'rae') {
         document.getElementById("sykPhoto").classList.add("hidden")
         document.getElementById("toastPhoto").classList.add("hidden")
         document.getElementById("corpsePhoto").classList.add("hidden")
+        document.getElementById("miyoungPhoto").classList.add("hidden")
 
     }
     else if (person === 'syk') {
         document.getElementById("raePhoto").classList.add("hidden")
         document.getElementById("toastPhoto").classList.add("hidden")
         document.getElementById("corpsePhoto").classList.add("hidden")
+        document.getElementById("miyoungPhoto").classList.add("hidden")
     }
     else if (person === 'toast') {
         document.getElementById("raePhoto").classList.add("hidden")
         document.getElementById("sykPhoto").classList.add("hidden")
         document.getElementById("corpsePhoto").classList.add("hidden")
+        document.getElementById("miyoungPhoto").classList.add("hidden")
     }
     else if (person === "corpse") {
         document.getElementById("raePhoto").classList.add("hidden")
         document.getElementById("sykPhoto").classList.add("hidden")
         document.getElementById("toastPhoto").classList.add("hidden")
+        document.getElementById("miyoungPhoto").classList.add("hidden")
+    }
+    else if (person === "miyoung") {
+        document.getElementById("raePhoto").classList.add("hidden")
+        document.getElementById("sykPhoto").classList.add("hidden")
+        document.getElementById("toastPhoto").classList.add("hidden")
+        document.getElementById("corpsePhoto").classList.add("hidden")
     }
 }
 
