@@ -24,6 +24,14 @@ var corpse = {
     "description": "anyone wanna play muck?",
 }
 
+// Startup Functions
+
+function descriptions() {
+    document.getElementById("descriptions").classList.remove("hidden")
+    document.getElementById("welcome").classList.add("hidden")
+    document.getElementById("selection").classList.add("hidden")
+}
+
 function descriptionHome() {
     document.getElementById("descriptions").classList.add("hidden")
     document.getElementById("quiz").classList.add("hidden")
@@ -32,6 +40,12 @@ function descriptionHome() {
     document.getElementById("memberInfo").innerHTML = ""
     document.getElementById("memberSelect").value = "placeholder"
     removePhotos('all')
+}
+
+function quiz() {
+    document.getElementById("quiz").classList.remove("hidden")
+    document.getElementById("welcome").classList.add("hidden")
+    document.getElementById("selection").classList.add("hidden")
 }
 
 function home() {
@@ -43,11 +57,8 @@ function home() {
 function quizHome() {
     location.reload()
 }
-function quiz() {
-    document.getElementById("quiz").classList.remove("hidden")
-    document.getElementById("welcome").classList.add("hidden")
-    document.getElementById("selection").classList.add("hidden")
-}
+
+// Helper Functions
 
 // Descriptions Code
 
@@ -71,20 +82,10 @@ function getMemberInfo() {
     }
     else if (member === "corpse") {
         document.getElementById("memberInfo").innerHTML = "Corpse is the " + corpse.height + ", " +
-         corpse.personality + "est person who just wants to know if , " + corpse.description
-         showPhoto("corpse")
+            corpse.personality + "est person who just wants to know if , " + corpse.description
+        showPhoto("corpse")
     }
 }
-
-function descriptions() {
-    document.getElementById("descriptions").classList.remove("hidden")
-    document.getElementById("welcome").classList.add("hidden")
-    document.getElementById("selection").classList.add("hidden")
-}
-
-
-
-
 
 function showPhoto(person) {
     var photo
@@ -148,88 +149,86 @@ function removePhotos(person) {
 
 var score = 0
 
-
-
 function start() {
     document.getElementById("quizStart").classList.add("hidden")
     document.getElementById("scoreboard").classList.remove("hidden")
     document.getElementById("question1").classList.remove("hidden")
 }
 
-function checkAnswer1() {
+function checkAnswer(number) {
     document.getElementById("scoring").innerHTML = score + "/4"
     var answer1 = document.getElementById("guess1").value
-    if (answer1 === 'corpse') {
-        alert("yay")
-        document.getElementById("quest2").classList.remove("hidden")
-        score++
-        document.getElementById("scoring").innerHTML = score + "/4"
-        return score
-    }
-    else {
-        alert('no')
-        document.getElementById("quest2").classList.remove("hidden")
-    }
-}
-
-function checkAnswer2() {
     var answer2 = document.getElementById("guess2").value
-    if (answer2 === 'toast') {
-        alert("yay")
-        document.getElementById("quest3").classList.remove("hidden")
-        score++
-        document.getElementById("scoring").innerHTML = score + "/4"
-        return score
-    }
-    else {
-        alert('no')
-        document.getElementById("quest3").classList.remove("hidden")
-    }
-}
-
-function checkAnswer3() {
     var answer3 = document.getElementById("guess3").value
-    if (answer3 === 'sykkuno') {
-        alert("yay")
-        document.getElementById("quest4").classList.remove("hidden")
-        score++
-        document.getElementById("scoring").innerHTML = score + "/4"
-    }
-    else {
-        alert('no')
-        document.getElementById("quest4").classList.remove("hidden")
-    }
-}
-function checkAnswer4() {
     var answer4 = document.getElementById("guess4").value
-    if (answer4 === 'valkyrae') {
-        alert("yay")
-        document.getElementById("done").classList.remove("hidden")
-        score++
-        document.getElementById("scoring").innerHTML = score + "/4"
+    if (number === 1) {
+        if (answer1 === 'corpse') {
+            alert("yay")
+            document.getElementById("quest2").classList.remove("hidden")
+            score++
+            document.getElementById("scoring").innerHTML = score + "/4"
+            return score;
+        }
+        else {
+            alert('no')
+            document.getElementById("quest2").classList.remove("hidden")
+        }
     }
-    else {
-        alert('no')
-        document.getElementById("done").classList.remove("hidden")
+    else if (number === 2) {
+        if (answer2 === 'toast') {
+            alert("yay")
+            document.getElementById("quest3").classList.remove("hidden")
+            score++
+            document.getElementById("scoring").innerHTML = score + "/4"
+            return score
+        }
+        else {
+            alert('no')
+            document.getElementById("quest3").classList.remove("hidden")
+        }
+    }
+    else if (number === 3) {
+        if (answer3 === 'sykkuno') {
+            alert("yay")
+            document.getElementById("quest4").classList.remove("hidden")
+            score++
+            document.getElementById("scoring").innerHTML = score + "/4"
+            return score
+        }
+        else {
+            alert('no')
+            document.getElementById("quest4").classList.remove("hidden")
+        }
+    }
+    else if (number === 4) {
+        if (answer4 === 'valkyrae') {
+            alert("yay")
+            document.getElementById("done").classList.remove("hidden")
+            score++
+            document.getElementById("scoring").innerHTML = score + "/4"
+            return score
+        }
+        else {
+            alert('no')
+            document.getElementById("done").classList.remove("hidden")
+        }
     }
 }
-
 
 function enter(question) {
     if (question === 1) {
-    checkAnswer1()
+        checkAnswer(1)
     }
     else if (question === 2) {
-        checkAnswer2()
+        checkAnswer(2)
     }
     else if (question === 3) {
-        checkAnswer3()
+        checkAnswer(3)
     }
     else if (question === 4) {
-        checkAnswer4()
+        checkAnswer(4)
     }
 }
-
 
 function question(problem) {
     if (problem === 2) {
@@ -242,12 +241,10 @@ function question(problem) {
     }
     else if (problem === 4) {
         document.getElementById("question3").classList.add("hidden")
-    document.getElementById("question4").classList.remove("hidden")
+        document.getElementById("question4").classList.remove("hidden")
     }
 
 }
-
-
 
 function finish() {
     document.getElementById("question4").classList.add("hidden")
