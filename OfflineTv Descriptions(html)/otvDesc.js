@@ -157,13 +157,13 @@ function start() {
 }
 
 function checkAnswer1() {
-    document.getElementById("scoring").innerHTML = score + "/3"
+    document.getElementById("scoring").innerHTML = score + "/4"
     var answer1 = document.getElementById("guess1").value
-    if (answer1 === 'toast') {
+    if (answer1 === 'corpse') {
         alert("yay")
         document.getElementById("quest2").classList.remove("hidden")
         score++
-        document.getElementById("scoring").innerHTML = score + "/3"
+        document.getElementById("scoring").innerHTML = score + "/4"
         return score
     }
     else {
@@ -174,11 +174,11 @@ function checkAnswer1() {
 
 function checkAnswer2() {
     var answer2 = document.getElementById("guess2").value
-    if (answer2 === 'sykkuno') {
+    if (answer2 === 'toast') {
         alert("yay")
         document.getElementById("quest3").classList.remove("hidden")
         score++
-        document.getElementById("scoring").innerHTML = score + "/3"
+        document.getElementById("scoring").innerHTML = score + "/4"
         return score
     }
     else {
@@ -189,11 +189,24 @@ function checkAnswer2() {
 
 function checkAnswer3() {
     var answer3 = document.getElementById("guess3").value
-    if (answer3 === 'valkyrae') {
+    if (answer3 === 'sykkuno') {
+        alert("yay")
+        document.getElementById("quest4").classList.remove("hidden")
+        score++
+        document.getElementById("scoring").innerHTML = score + "/4"
+    }
+    else {
+        alert('no')
+        document.getElementById("quest4").classList.remove("hidden")
+    }
+}
+function checkAnswer4() {
+    var answer4 = document.getElementById("guess4").value
+    if (answer4 === 'valkyrae') {
         alert("yay")
         document.getElementById("done").classList.remove("hidden")
         score++
-        document.getElementById("scoring").innerHTML = score + "/3"
+        document.getElementById("scoring").innerHTML = score + "/4"
     }
     else {
         alert('no')
@@ -202,32 +215,44 @@ function checkAnswer3() {
 }
 
 
-function enter1() {
+function enter(question) {
+    if (question === 1) {
     checkAnswer1()
+    }
+    else if (question === 2) {
+        checkAnswer2()
+    }
+    else if (question === 3) {
+        checkAnswer3()
+    }
+    else if (question === 4) {
+        checkAnswer4()
+    }
 }
 
-function enter2() {
-    checkAnswer2()
+
+function question(problem) {
+    if (problem === 2) {
+        document.getElementById("question1").classList.add("hidden")
+        document.getElementById("question2").classList.remove("hidden")
+    }
+    else if (problem === 3) {
+        document.getElementById("question2").classList.add("hidden")
+        document.getElementById("question3").classList.remove("hidden")
+    }
+    else if (problem === 4) {
+        document.getElementById("question3").classList.add("hidden")
+    document.getElementById("question4").classList.remove("hidden")
+    }
+
 }
 
-function enter3() {
-    checkAnswer3()
-}
 
-function question2() {
-    document.getElementById("question1").classList.add("hidden")
-    document.getElementById("question2").classList.remove("hidden")
-}
-
-function question3() {
-    document.getElementById("question2").classList.add("hidden")
-    document.getElementById("question3").classList.remove("hidden")
-}
 
 function finish() {
-    document.getElementById("question3").classList.add("hidden")
+    document.getElementById("question4").classList.add("hidden")
     document.getElementById("finishScreen").classList.remove("hidden")
     document.getElementById("scoring").classList.add("hidden")
-    document.getElementById("message").innerHTML = "Congrats, You Got A " + score + "/3"
+    document.getElementById("message").innerHTML = "Congrats, You Got A " + score + "/4"
     document.getElementById("home2").classList.remove("hidden")
 }
