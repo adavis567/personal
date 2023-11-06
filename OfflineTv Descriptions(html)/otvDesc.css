@@ -72,6 +72,10 @@ img {
     border: 8px solid gray
 }
 
+#lesliePhoto {
+    border: 8px solid orange
+}
+
 #descHome {
     margin-bottom: 20px;
 }

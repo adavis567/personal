@@ -108,6 +108,11 @@ function getMemberInfo() {
             + miyoung.personality + ", and an " + miyoung.description
         showPhoto("miyoung")
     }
+    else if (member === "leslie") {
+        document.getElementById("memberInfo").innerHTML = "Leslie is " + leslie.height + ", she like to say "
+            + leslie.personality + ", and some people know her as the " + leslie.description
+        showPhoto("leslie")
+    }
 }
 
 function showPhoto(person) {
@@ -142,6 +147,12 @@ function showPhoto(person) {
         document.getElementById("memberPhoto").innerHTML = photo
         removePhotos('miyoung')
     }
+    else if (person === "leslie") {
+        photo = document.getElementById("lesliePhoto").innerHTML
+        document.getElementById("lesliePhoto").classList.remove("hidden")
+        document.getElementById("memberPhoto").innerHTML = photo
+        removePhotos('leslie')
+    }
 }
 
 function removePhotos(person) {
@@ -151,12 +162,14 @@ function removePhotos(person) {
         document.getElementById("toastPhoto").classList.add("hidden")
         document.getElementById("corpsePhoto").classList.add("hidden")
         document.getElementById("miyoungPhoto").classList.add("hidden")
+        document.getElementById("lesliePhoto").classList.add("hidden")
     }
     if (person === 'rae') {
         document.getElementById("sykPhoto").classList.add("hidden")
         document.getElementById("toastPhoto").classList.add("hidden")
         document.getElementById("corpsePhoto").classList.add("hidden")
         document.getElementById("miyoungPhoto").classList.add("hidden")
+        document.getElementById("lesliePhoto").classList.add("hidden")
 
     }
     else if (person === 'syk') {
@@ -164,24 +177,35 @@ function removePhotos(person) {
         document.getElementById("toastPhoto").classList.add("hidden")
         document.getElementById("corpsePhoto").classList.add("hidden")
         document.getElementById("miyoungPhoto").classList.add("hidden")
+        document.getElementById("lesliePhoto").classList.add("hidden")
     }
     else if (person === 'toast') {
         document.getElementById("raePhoto").classList.add("hidden")
         document.getElementById("sykPhoto").classList.add("hidden")
         document.getElementById("corpsePhoto").classList.add("hidden")
         document.getElementById("miyoungPhoto").classList.add("hidden")
+        document.getElementById("lesliePhoto").classList.add("hidden")
     }
     else if (person === "corpse") {
         document.getElementById("raePhoto").classList.add("hidden")
         document.getElementById("sykPhoto").classList.add("hidden")
         document.getElementById("toastPhoto").classList.add("hidden")
         document.getElementById("miyoungPhoto").classList.add("hidden")
+        document.getElementById("lesliePhoto").classList.add("hidden")
     }
     else if (person === "miyoung") {
         document.getElementById("raePhoto").classList.add("hidden")
         document.getElementById("sykPhoto").classList.add("hidden")
         document.getElementById("toastPhoto").classList.add("hidden")
         document.getElementById("corpsePhoto").classList.add("hidden")
+        document.getElementById("lesliePhoto").classList.add("hidden")
+    }
+    else if (person === "leslie") {
+        document.getElementById("raePhoto").classList.add("hidden")
+        document.getElementById("sykPhoto").classList.add("hidden")
+        document.getElementById("toastPhoto").classList.add("hidden")
+        document.getElementById("corpsePhoto").classList.add("hidden")
+        document.getElementById("miyoungPhoto").classList.add("hidden")
     }
 }
 
