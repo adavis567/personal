@@ -80,6 +80,18 @@ img {
     border: 8px solid yellow
 }
 
+#lilyPhoto {
+    border: 8px solid rgb(250, 156, 171)
+}
+
+#michaelPhoto {
+    border: 8px solid rgb(150,75,0)
+}
+
+#scarraPhoto {
+    border: 8px solid blue
+}
+
 #descHome {
     margin-bottom: 20px;
 }
