@@ -1,3 +1,29 @@
+/* Define a custom font for the entire page */
+body {
+    font-family: "Arial", sans-serif;
+    /* You can replace "Arial" with the font you prefer */
+}
+
+/* Apply different fonts for specific elements */
+h1,
+h2,
+h3 {
+    font-family: "Georgia", serif;
+    /* Example font for headings */
+}
+
+p {
+    font-family: "Helvetica", sans-serif;
+    /* Example font for paragraphs */
+}
+
+/* You can specify a fallback font stack in case the primary font is not available */
+input,
+button {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    /* Example font stack for input fields and buttons */
+}
+
 .hidden {
     display: none
 }
@@ -18,7 +44,8 @@ body {
     text-align: center;
 }
 
-#descriptions {
+#descriptions,
+#quiz {
     width: 50%;
     margin: auto;
     text-align: center;
@@ -34,16 +61,36 @@ button {
     cursor: pointer;
     outline: none;
     color: #f7f1f1;
-    background-color: mediumvioletred;
     border: none;
     border-radius: 5px;
     box-shadow: 4px 4px #999;
+    background-color: #3498db;
+    /* Default background color */
+    transition: background-color 0.3s, transform 0.2s;
+    /* Transition on background color and transform (scale) */
+    cursor: pointer;
 }
 
 button:active {
     background-color: #3e8e41;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+
+}
+/* CSS for button animation */
+button:hover {
+    background-color: #2980b9;
+    /* New background color on hover */
+    transform: scale(1.1);
+    /* Scale the button slightly on hover */
+}
+
+input[type="text"]{
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 img {
@@ -85,7 +132,7 @@ img {
 }
 
 #michaelPhoto {
-    border: 8px solid rgb(150,75,0)
+    border: 8px solid rgb(150, 75, 0)
 }
 
 #scarraPhoto {
@@ -110,4 +157,13 @@ img {
 
 #memberSelect {
     margin-bottom: 30px;
+}
+
+#finishScreen {
+    margin-top: 300px
+}
+
+#quizStart {
+    margin-top: 200px;
+    line-height: 2;
 }
