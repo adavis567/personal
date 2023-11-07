@@ -481,7 +481,7 @@ function start() {
 }
 
 function checkAnswer(number) {
-    document.getElementById("scoring").innerHTML = score + "/10"
+    document.getElementById("scoring").innerHTML = score + "/13"
     var answer1 = document.getElementById("guess1").value
     var answer2 = document.getElementById("guess2").value
     var answer3 = document.getElementById("guess3").value
@@ -492,12 +492,15 @@ function checkAnswer(number) {
     var answer8 = document.getElementById("guess8").value
     var answer9 = document.getElementById("guess9").value
     var answer10 = document.getElementById("guess10").value
+    var answer11 = document.getElementById("guess11").value
+    var answer12 = document.getElementById("guess12").value
+    var answer13 = document.getElementById("guess13").value
     if (number === 1) {
         if (answer1 === 'scarra' || answer1 === "Scarra") {
             alert("yay")
             document.getElementById("quest2").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/10"
+            document.getElementById("scoring").innerHTML = score + "/13"
             return score;
         }
         else {
@@ -510,7 +513,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest3").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/10"
+            document.getElementById("scoring").innerHTML = score + "/13"
             return score;
         }
         else {
@@ -523,7 +526,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest4").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/10"
+            document.getElementById("scoring").innerHTML = score + "/13"
             return score
         }
         else {
@@ -536,7 +539,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest5").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/10"
+            document.getElementById("scoring").innerHTML = score + "/13"
             return score
         }
         else {
@@ -549,7 +552,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest6").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/10"
+            document.getElementById("scoring").innerHTML = score + "/13"
             return score
         }
         else {
@@ -558,11 +561,11 @@ function checkAnswer(number) {
         }
     }
     else if (number === 6) {
-        if (answer6 === 'miyoung' || answer6 === "Miyoung") {
+        if (answer6 === 'sydney' || answer6 === "Sydney") {
             alert("yay")
             document.getElementById("quest7").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/10"
+            document.getElementById("scoring").innerHTML = score + "/13"
             return score
         }
         else {
@@ -571,11 +574,11 @@ function checkAnswer(number) {
         }
     }
     else if (number === 7) {
-        if (answer7 === 'lily' || answer7 === "Lily") {
+        if (answer7 === 'jodi' || answer7 === "Jodi") {
             alert("yay")
             document.getElementById("quest8").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/10"
+            document.getElementById("scoring").innerHTML = score + "/13"
             return score
         }
         else {
@@ -584,11 +587,11 @@ function checkAnswer(number) {
         }
     }
     else if (number === 8) {
-        if (answer8 === 'yvonne' || answer8 === "Yvonne") {
+        if (answer8 === 'john' || answer8 === "John") {
             alert("yay")
             document.getElementById("quest9").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/10"
+            document.getElementById("scoring").innerHTML = score + "/13"
             return score
         }
         else {
@@ -597,11 +600,11 @@ function checkAnswer(number) {
         }
     }
     else if (number === 9) {
-        if (answer9 === 'sykkuno' || answer9 === "Sykkuno") {
+        if (answer9 === 'miyoung' || answer9 === "Miyoung") {
             alert("yay")
             document.getElementById("quest10").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/10"
+            document.getElementById("scoring").innerHTML = score + "/13"
             return score
         }
         else {
@@ -610,11 +613,50 @@ function checkAnswer(number) {
         }
     }
     else if (number === 10) {
-        if (answer10 === 'valkyrae' || answer10 === "Valkyrae") {
+        if (answer10 === 'lily' || answer10 === "Lily") {
+            alert("yay")
+            document.getElementById("quest11").classList.remove("hidden")
+            score++
+            document.getElementById("scoring").innerHTML = score + "/13"
+            return score
+        }
+        else {
+            alert('no')
+            document.getElementById("quest11").classList.remove("hidden")
+        }
+    }
+    else if (number === 11) {
+        if (answer11 === 'yvonne' || answer11 === "Yvonne") {
+            alert("yay")
+            document.getElementById("quest12").classList.remove("hidden")
+            score++
+            document.getElementById("scoring").innerHTML = score + "/13"
+            return score
+        }
+        else {
+            alert('no')
+            document.getElementById("quest12").classList.remove("hidden")
+        }
+    }
+    else if (number === 12) {
+        if (answer12 === 'sykkuno' || answer12 === "Sykkuno") {
+            alert("yay")
+            document.getElementById("quest13").classList.remove("hidden")
+            score++
+            document.getElementById("scoring").innerHTML = score + "/13"
+            return score
+        }
+        else {
+            alert('no')
+            document.getElementById("quest13").classList.remove("hidden")
+        }
+    }
+    else if (number === 13) {
+        if (answer13 === 'valkyrae' || answer13 === "Valkyrae") {
             alert("yay")
             document.getElementById("done").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/10"
+            document.getElementById("scoring").innerHTML = score + "/13"
             return score
         }
         else {
@@ -666,6 +708,18 @@ function enter(question) {
         document.getElementById("enterBtn10").classList.add("hidden")
         checkAnswer(10)
     }
+    else if (question === 11) {
+        document.getElementById("enterBtn11").classList.add("hidden")
+        checkAnswer(11)
+    }
+    else if (question === 12) {
+        document.getElementById("enterBtn12").classList.add("hidden")
+        checkAnswer(12)
+    }
+    else if (question === 13) {
+        document.getElementById("enterBtn13").classList.add("hidden")
+        checkAnswer(13)
+    }
 }
 
 function question(problem) {
@@ -705,12 +759,24 @@ function question(problem) {
         document.getElementById("question9").classList.add("hidden")
         document.getElementById("question10").classList.remove("hidden")
     }
+    else if (problem === 11) {
+        document.getElementById("question10").classList.add("hidden")
+        document.getElementById("question11").classList.remove("hidden")
+    }
+    else if (problem === 12) {
+        document.getElementById("question11").classList.add("hidden")
+        document.getElementById("question12").classList.remove("hidden")
+    }
+    else if (problem === 13) {
+        document.getElementById("question12").classList.add("hidden")
+        document.getElementById("question13").classList.remove("hidden")
+    }
 }
 
 function finish() {
-    document.getElementById("question10").classList.add("hidden")
+    document.getElementById("question13").classList.add("hidden")
     document.getElementById("finishScreen").classList.remove("hidden")
     document.getElementById("scoring").classList.add("hidden")
-    document.getElementById("message").innerHTML = "Congrats, You Got A " + score + "/10"
+    document.getElementById("message").innerHTML = "Congrats, You Got A " + score + "/13"
     document.getElementById("home2").classList.remove("hidden")
 }
