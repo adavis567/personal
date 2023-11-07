@@ -57,7 +57,7 @@ img {
 }
 
 #sykPhoto {
-    border: 8px solid #17d809
+    border: 8px solid rgb(11, 117, 3)
 }
 
 #toastPhoto {
@@ -90,6 +90,18 @@ img {
 
 #scarraPhoto {
     border: 8px solid blue
+}
+
+#jodiPhoto {
+    border: 8px solid maroon
+}
+
+#johnPhoto {
+    border: 8px solid rgb(7, 236, 7)
+}
+
+#sydPhoto {
+    border: 8px solid rgb(78, 78, 78)
 }
 
 #descHome {
