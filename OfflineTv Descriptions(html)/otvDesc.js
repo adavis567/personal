@@ -500,33 +500,43 @@ function checkAnswer(number) {
 
 function enter(question) {
     if (question === 1) {
+        document.getElementById("enterBtn1").classList.add("hidden")
         checkAnswer(1)
     }
     else if (question === 2) {
+        document.getElementById("enterBtn2").classList.add("hidden")
         checkAnswer(2)
     }
     else if (question === 3) {
+        document.getElementById("enterBtn3").classList.add("hidden")
         checkAnswer(3)
     }
     else if (question === 4) {
+        document.getElementById("enterBtn4").classList.add("hidden")
         checkAnswer(4)
     }
     else if (question === 5) {
+        document.getElementById("enterBtn5").classList.add("hidden")
         checkAnswer(5)
     }
     else if (question === 6) {
+        document.getElementById("enterBtn6").classList.add("hidden")
         checkAnswer(6)
     }
     else if (question === 7) {
+        document.getElementById("enterBtn7").classList.add("hidden")
         checkAnswer(7)
     }
     else if (question === 8) {
+        document.getElementById("enterBtn8").classList.add("hidden")
         checkAnswer(8)
     }
     else if (question === 9) {
+        document.getElementById("enterBtn9").classList.add("hidden")
         checkAnswer(9)
     }
     else if (question === 10) {
+        document.getElementById("enterBtn10").classList.add("hidden")
         checkAnswer(10)
     }
 }
