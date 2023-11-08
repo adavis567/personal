@@ -155,6 +155,10 @@ img {
     border: 8px solid rgb(218, 8, 218)
 }
 
+#peterPhoto {
+    border: 8px solid rgb(222,184,135)
+}
+
 #descHome {
     margin-bottom: 20px;
 }
