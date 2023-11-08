@@ -151,6 +151,10 @@ img {
     border: 8px solid rgb(78, 78, 78)
 }
 
+#pokiPhoto {
+    border: 8px solid rgb(218, 8, 218)
+}
+
 #descHome {
     margin-bottom: 20px;
 }
