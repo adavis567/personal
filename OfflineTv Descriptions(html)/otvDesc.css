@@ -159,6 +159,14 @@ img {
     border: 8px solid rgb(222,184,135)
 }
 
+#celinePhoto {
+    border: 8px solid lightskyblue
+}
+
+#janjanPhoto {
+    border: 8px solid navy
+}
+
 #descHome {
     margin-bottom: 20px;
 }

@@ -90,6 +90,18 @@ var pp = {
     "description": "ewwwwww Peterrrrr"
 }
 
+var celine = {
+    "height": "at least taller than rae",
+    "personality": "innocent",
+    "description": "wahhhhhhhhhh!!!!!",
+}
+
+var janjan = {
+    "height": "tall",
+    "personality": "goofball",
+    "description": "manlymanchad"
+}
+
 
 // Startup Functions
 
@@ -204,8 +216,18 @@ function getMemberInfo() {
     }
     else if (member === "pp") {
         document.getElementById("memberInfo").innerHTML = "Peter is a " + pp.height + " "
-        + pp.personality + ". " + pp.description
+            + pp.personality + ". " + pp.description
         showPhoto("pp")
+    }
+    else if (member === "celine") {
+        document.getElementById("memberInfo").innerHTML = "Celine is " + celine.height + ", she's "
+        + celine.personality + ", and when she’s scared, she goes " + celine.description
+        showPhoto("celine")
+    }
+    else if (member === "janjan") {
+        document.getElementById("memberInfo").innerHTML = "By day, Janet is a " + janjan.height
+        + " " + janjan.personality + ", but by night, she’s " + janjan.description
+        showPhoto("janjan")
     }
 }
 
@@ -301,6 +323,18 @@ function showPhoto(person) {
         document.getElementById("memberPhoto").innerHTML = photo
         removePhotos('pp')
     }
+    else if (person === "celine") {
+        photo = document.getElementById("celinePhoto").innerHTML
+        document.getElementById("celinePhoto").classList.remove("hidden")
+        document.getElementById("memberPhoto").innerHTML = photo
+        removePhotos('celine')
+    }
+    else if (person === "janjan") {
+        photo = document.getElementById("janjanPhoto").innerHTML
+        document.getElementById("janjanPhoto").classList.remove("hidden")
+        document.getElementById("memberPhoto").innerHTML = photo
+        removePhotos('janjan')
+    }
 }
 
 function removePhotos(person) {
@@ -320,6 +354,8 @@ function removePhotos(person) {
         document.getElementById("sydPhoto").classList.add("hidden")
         document.getElementById("pokiPhoto").classList.add("hidden")
         document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
     }
     if (person === 'rae') {
         document.getElementById("sykPhoto").classList.add("hidden")
@@ -336,6 +372,8 @@ function removePhotos(person) {
         document.getElementById("sydPhoto").classList.add("hidden")
         document.getElementById("pokiPhoto").classList.add("hidden")
         document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
 
     }
     else if (person === 'syk') {
@@ -353,6 +391,8 @@ function removePhotos(person) {
         document.getElementById("sydPhoto").classList.add("hidden")
         document.getElementById("pokiPhoto").classList.add("hidden")
         document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
     }
     else if (person === 'toast') {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -369,6 +409,8 @@ function removePhotos(person) {
         document.getElementById("sydPhoto").classList.add("hidden")
         document.getElementById("pokiPhoto").classList.add("hidden")
         document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
     }
     else if (person === "corpse") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -385,6 +427,8 @@ function removePhotos(person) {
         document.getElementById("sydPhoto").classList.add("hidden")
         document.getElementById("pokiPhoto").classList.add("hidden")
         document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
     }
     else if (person === "miyoung") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -401,6 +445,8 @@ function removePhotos(person) {
         document.getElementById("sydPhoto").classList.add("hidden")
         document.getElementById("pokiPhoto").classList.add("hidden")
         document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
     }
     else if (person === "leslie") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -417,6 +463,8 @@ function removePhotos(person) {
         document.getElementById("sydPhoto").classList.add("hidden")
         document.getElementById("pokiPhoto").classList.add("hidden")
         document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
     }
     else if (person === "evon") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -433,6 +481,8 @@ function removePhotos(person) {
         document.getElementById("sydPhoto").classList.add("hidden")
         document.getElementById("pokiPhoto").classList.add("hidden")
         document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
     }
     else if (person === "lily") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -449,6 +499,8 @@ function removePhotos(person) {
         document.getElementById("sydPhoto").classList.add("hidden")
         document.getElementById("pokiPhoto").classList.add("hidden")
         document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
     }
     else if (person === "michael") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -465,6 +517,8 @@ function removePhotos(person) {
         document.getElementById("sydPhoto").classList.add("hidden")
         document.getElementById("pokiPhoto").classList.add("hidden")
         document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
     }
     else if (person === "scarra") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -481,6 +535,8 @@ function removePhotos(person) {
         document.getElementById("sydPhoto").classList.add("hidden")
         document.getElementById("pokiPhoto").classList.add("hidden")
         document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
     }
     else if (person === "jodi") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -497,6 +553,8 @@ function removePhotos(person) {
         document.getElementById("sydPhoto").classList.add("hidden")
         document.getElementById("pokiPhoto").classList.add("hidden")
         document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
     }
     else if (person === "john") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -513,6 +571,8 @@ function removePhotos(person) {
         document.getElementById("sydPhoto").classList.add("hidden")
         document.getElementById("pokiPhoto").classList.add("hidden")
         document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
     }
     else if (person === "syd") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -529,6 +589,8 @@ function removePhotos(person) {
         document.getElementById("johnPhoto").classList.add("hidden")
         document.getElementById("pokiPhoto").classList.add("hidden")
         document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
     }
     else if (person === "poki") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -545,6 +607,8 @@ function removePhotos(person) {
         document.getElementById("johnPhoto").classList.add("hidden")
         document.getElementById("sydPhoto").classList.add("hidden")
         document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
     }
     else if (person === "pp") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -561,6 +625,44 @@ function removePhotos(person) {
         document.getElementById("johnPhoto").classList.add("hidden")
         document.getElementById("sydPhoto").classList.add("hidden")
         document.getElementById("pokiPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
+    }
+    else if (person === "celine") {
+        document.getElementById("raePhoto").classList.add("hidden")
+        document.getElementById("sykPhoto").classList.add("hidden")
+        document.getElementById("toastPhoto").classList.add("hidden")
+        document.getElementById("corpsePhoto").classList.add("hidden")
+        document.getElementById("miyoungPhoto").classList.add("hidden")
+        document.getElementById("lesliePhoto").classList.add("hidden")
+        document.getElementById("evonPhoto").classList.add("hidden")
+        document.getElementById("lilyPhoto").classList.add("hidden")
+        document.getElementById("michaelPhoto").classList.add("hidden")
+        document.getElementById("scarraPhoto").classList.add("hidden")
+        document.getElementById("jodiPhoto").classList.add("hidden")
+        document.getElementById("johnPhoto").classList.add("hidden")
+        document.getElementById("sydPhoto").classList.add("hidden")
+        document.getElementById("pokiPhoto").classList.add("hidden")
+        document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
+    }
+    else if (person === "janjan") {
+        document.getElementById("raePhoto").classList.add("hidden")
+        document.getElementById("sykPhoto").classList.add("hidden")
+        document.getElementById("toastPhoto").classList.add("hidden")
+        document.getElementById("corpsePhoto").classList.add("hidden")
+        document.getElementById("miyoungPhoto").classList.add("hidden")
+        document.getElementById("lesliePhoto").classList.add("hidden")
+        document.getElementById("evonPhoto").classList.add("hidden")
+        document.getElementById("lilyPhoto").classList.add("hidden")
+        document.getElementById("michaelPhoto").classList.add("hidden")
+        document.getElementById("scarraPhoto").classList.add("hidden")
+        document.getElementById("jodiPhoto").classList.add("hidden")
+        document.getElementById("johnPhoto").classList.add("hidden")
+        document.getElementById("sydPhoto").classList.add("hidden")
+        document.getElementById("pokiPhoto").classList.add("hidden")
+        document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
     }
 }
 
