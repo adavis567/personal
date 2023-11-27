@@ -167,6 +167,14 @@ img {
     border: 8px solid navy
 }
 
+#wondyPhoto {
+    border: 8px solid rgb(143, 5, 235)
+}
+
+#abePhoto {
+    border: 8px solid rgb(80, 79, 79)
+}
+
 #descHome {
     margin-bottom: 20px;
 }
