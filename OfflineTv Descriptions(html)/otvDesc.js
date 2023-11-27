@@ -114,6 +114,12 @@ abe = {
     "description": "abesfault",
 }
 
+tina = {
+    "height": "smol",
+    "personality": "cutesy",
+    "description": "innocent cawot"
+}
+
 
 // Startup Functions
 
@@ -233,23 +239,28 @@ function getMemberInfo() {
     }
     else if (member === "celine") {
         document.getElementById("memberInfo").innerHTML = "Celine is " + celine.height + ", she's "
-        + celine.personality + ", and when she’s scared, she goes " + celine.description
+            + celine.personality + ", and when she’s scared, she goes " + celine.description
         showPhoto("celine")
     }
     else if (member === "janjan") {
         document.getElementById("memberInfo").innerHTML = "By day, Janet is a " + janjan.height
-        + " " + janjan.personality + ", but by night, she’s " + janjan.description
+            + " " + janjan.personality + ", but by night, she’s " + janjan.description
         showPhoto("janjan")
     }
     else if (member === "wondy") {
         document.getElementById("memberInfo").innerHTML = "Wendy is " + wondy.height + ", and is a "
-        + wondy.personality + " when she’s not screaming " + wondy.description
+            + wondy.personality + " when she’s not screaming " + wondy.description
         showPhoto("wondy")
     }
     else if (member === "abe") {
         document.getElementById("memberInfo").innerHTML = "Abe is definitely " + abe.height + ", he's a "
-        + abe.personality + ", and when things don't go your way, just remember " + abe.description
+            + abe.personality + ", and when things don't go your way, just remember " + abe.description
         showPhoto("abe")
+    }
+    else if (member === "tina") {
+        document.getElementById("memberInfo").innerHTML = "Tina’s a " + tina.height + ", "
+        + tina.personality + ", " + tina.description
+        showPhoto("tina")
     }
 }
 
@@ -369,6 +380,12 @@ function showPhoto(person) {
         document.getElementById("memberPhoto").innerHTML = photo
         removePhotos('abe')
     }
+    else if (person === "tina") {
+        photo = document.getElementById("tinaPhoto").innerHTML
+        document.getElementById("tinaPhoto").classList.remove("hidden")
+        document.getElementById("memberPhoto").innerHTML = photo
+        removePhotos('tina')
+    }
 }
 
 function removePhotos(person) {
@@ -392,6 +409,7 @@ function removePhotos(person) {
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     if (person === 'rae') {
         document.getElementById("sykPhoto").classList.add("hidden")
@@ -412,6 +430,7 @@ function removePhotos(person) {
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
 
     }
     else if (person === 'syk') {
@@ -433,6 +452,7 @@ function removePhotos(person) {
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     else if (person === 'toast') {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -453,6 +473,7 @@ function removePhotos(person) {
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     else if (person === "corpse") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -473,6 +494,7 @@ function removePhotos(person) {
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     else if (person === "miyoung") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -493,6 +515,7 @@ function removePhotos(person) {
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     else if (person === "leslie") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -513,6 +536,7 @@ function removePhotos(person) {
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     else if (person === "evon") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -533,6 +557,7 @@ function removePhotos(person) {
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     else if (person === "lily") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -553,6 +578,7 @@ function removePhotos(person) {
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     else if (person === "michael") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -573,6 +599,7 @@ function removePhotos(person) {
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     else if (person === "scarra") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -593,6 +620,7 @@ function removePhotos(person) {
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     else if (person === "jodi") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -613,6 +641,7 @@ function removePhotos(person) {
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     else if (person === "john") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -633,6 +662,7 @@ function removePhotos(person) {
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     else if (person === "syd") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -653,6 +683,7 @@ function removePhotos(person) {
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     else if (person === "poki") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -673,6 +704,7 @@ function removePhotos(person) {
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     else if (person === "pp") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -693,6 +725,7 @@ function removePhotos(person) {
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     else if (person === "celine") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -713,6 +746,7 @@ function removePhotos(person) {
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     else if (person === "janjan") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -733,6 +767,7 @@ function removePhotos(person) {
         document.getElementById("celinePhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     else if (person === "wondy") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -753,6 +788,7 @@ function removePhotos(person) {
         document.getElementById("celinePhoto").classList.add("hidden")
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("abePhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
     }
     else if (person === "abe") {
         document.getElementById("raePhoto").classList.add("hidden")
@@ -773,6 +809,28 @@ function removePhotos(person) {
         document.getElementById("celinePhoto").classList.add("hidden")
         document.getElementById("janjanPhoto").classList.add("hidden")
         document.getElementById("wondyPhoto").classList.add("hidden")
+        document.getElementById("tinaPhoto").classList.add("hidden")
+    }
+    else if (person === "tina") {
+        document.getElementById("raePhoto").classList.add("hidden")
+        document.getElementById("sykPhoto").classList.add("hidden")
+        document.getElementById("toastPhoto").classList.add("hidden")
+        document.getElementById("corpsePhoto").classList.add("hidden")
+        document.getElementById("miyoungPhoto").classList.add("hidden")
+        document.getElementById("lesliePhoto").classList.add("hidden")
+        document.getElementById("evonPhoto").classList.add("hidden")
+        document.getElementById("lilyPhoto").classList.add("hidden")
+        document.getElementById("michaelPhoto").classList.add("hidden")
+        document.getElementById("scarraPhoto").classList.add("hidden")
+        document.getElementById("jodiPhoto").classList.add("hidden")
+        document.getElementById("johnPhoto").classList.add("hidden")
+        document.getElementById("sydPhoto").classList.add("hidden")
+        document.getElementById("pokiPhoto").classList.add("hidden")
+        document.getElementById("peterPhoto").classList.add("hidden")
+        document.getElementById("celinePhoto").classList.add("hidden")
+        document.getElementById("janjanPhoto").classList.add("hidden")
+        document.getElementById("wondyPhoto").classList.add("hidden")
+        document.getElementById("abePhoto").classList.add("hidden")
     }
 }
 
@@ -787,7 +845,7 @@ function start() {
 }
 
 function checkAnswer(number) {
-    document.getElementById("scoring").innerHTML = score + "/19"
+    document.getElementById("scoring").innerHTML = score + "/20"
     var answer1 = document.getElementById("guess1").value
     var answer2 = document.getElementById("guess2").value
     var answer3 = document.getElementById("guess3").value
@@ -807,12 +865,13 @@ function checkAnswer(number) {
     var answer17 = document.getElementById("guess17").value
     var answer18 = document.getElementById("guess18").value
     var answer19 = document.getElementById("guess19").value
+    var answer20 = document.getElementById("guess20").value
     if (number === 1) {
         if (answer1 === 'scarra' || answer1 === "Scarra") {
             alert("yay")
             document.getElementById("quest2").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
+            document.getElementById("scoring").innerHTML = score + "/20"
             return score;
         }
         else {
@@ -825,7 +884,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest3").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
+            document.getElementById("scoring").innerHTML = score + "/20"
             return score;
         }
         else {
@@ -838,7 +897,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest4").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
+            document.getElementById("scoring").innerHTML = score + "/20"
             return score;
         }
         else {
@@ -851,7 +910,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest5").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
+            document.getElementById("scoring").innerHTML = score + "/20"
             return score
         }
         else {
@@ -864,7 +923,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest6").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
+            document.getElementById("scoring").innerHTML = score + "/20"
             return score
         }
         else {
@@ -877,7 +936,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest7").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
+            document.getElementById("scoring").innerHTML = score + "/20"
             return score
         }
         else {
@@ -890,7 +949,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest8").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
+            document.getElementById("scoring").innerHTML = score + "/20"
             return score
         }
         else {
@@ -903,7 +962,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest9").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
+            document.getElementById("scoring").innerHTML = score + "/20"
             return score
         }
         else {
@@ -912,11 +971,11 @@ function checkAnswer(number) {
         }
     }
     else if (number === 9) {
-        if (answer9 === 'john' || answer9 === "John") {
+        if (answer9 === 'tina' || answer9 === "Tina") {
             alert("yay")
             document.getElementById("quest10").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
+            document.getElementById("scoring").innerHTML = score + "/20"
             return score
         }
         else {
@@ -925,11 +984,11 @@ function checkAnswer(number) {
         }
     }
     else if (number === 10) {
-        if (answer10 === 'miyoung' || answer10 === "Miyoung") {
+        if (answer10 === 'john' || answer10 === "John") {
             alert("yay")
             document.getElementById("quest11").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
+            document.getElementById("scoring").innerHTML = score + "/20"
             return score
         }
         else {
@@ -938,11 +997,11 @@ function checkAnswer(number) {
         }
     }
     else if (number === 11) {
-        if (answer11 === 'lily' || answer11 === "Lily") {
+        if (answer11 === 'miyoung' || answer11 === "Miyoung") {
             alert("yay")
             document.getElementById("quest12").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
+            document.getElementById("scoring").innerHTML = score + "/20"
             return score
         }
         else {
@@ -951,11 +1010,11 @@ function checkAnswer(number) {
         }
     }
     else if (number === 12) {
-        if (answer12 === 'poki' || answer12 === "Poki") {
+        if (answer12 === 'lily' || answer12 === "Lily") {
             alert("yay")
             document.getElementById("quest13").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
+            document.getElementById("scoring").innerHTML = score + "/20"
             return score
         }
         else {
@@ -964,11 +1023,11 @@ function checkAnswer(number) {
         }
     }
     else if (number === 13) {
-        if (answer13 === 'wendy' || answer13 === "Wendy") {
+        if (answer13 === 'poki' || answer13 === "Poki") {
             alert("yay")
             document.getElementById("quest14").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
+            document.getElementById("scoring").innerHTML = score + "/20"
             return score
         }
         else {
@@ -977,11 +1036,11 @@ function checkAnswer(number) {
         }
     }
     else if (number === 14) {
-        if (answer14 === 'yvonne' || answer14 === "Yvonne") {
+        if (answer14 === 'wendy' || answer14 === "Wendy") {
             alert("yay")
             document.getElementById("quest15").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
+            document.getElementById("scoring").innerHTML = score + "/20"
             return score
         }
         else {
@@ -990,12 +1049,12 @@ function checkAnswer(number) {
         }
     }
     else if (number === 15) {
-        if (answer15 === 'janet' || answer15 === "Janet") {
+        if (answer15 === 'yvonne' || answer15 === "Yvonne") {
             alert("yay")
             document.getElementById("quest16").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
-            return score;
+            document.getElementById("scoring").innerHTML = score + "/20"
+            return score
         }
         else {
             alert('no')
@@ -1003,12 +1062,12 @@ function checkAnswer(number) {
         }
     }
     else if (number === 16) {
-        if (answer16 === 'sykkuno' || answer16 === "Sykkuno") {
+        if (answer16 === 'janet' || answer16 === "Janet") {
             alert("yay")
             document.getElementById("quest17").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
-            return score
+            document.getElementById("scoring").innerHTML = score + "/20"
+            return score;
         }
         else {
             alert('no')
@@ -1016,11 +1075,11 @@ function checkAnswer(number) {
         }
     }
     else if (number === 17) {
-        if (answer17 === 'abe' || answer17 === "Abe") {
+        if (answer17 === 'sykkuno' || answer17 === "Sykkuno") {
             alert("yay")
             document.getElementById("quest18").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
+            document.getElementById("scoring").innerHTML = score + "/20"
             return score
         }
         else {
@@ -1029,11 +1088,11 @@ function checkAnswer(number) {
         }
     }
     else if (number === 18) {
-        if (answer18 === 'valkyrae' || answer18 === "Valkyrae") {
+        if (answer18 === 'abe' || answer18 === "Abe") {
             alert("yay")
             document.getElementById("quest19").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
+            document.getElementById("scoring").innerHTML = score + "/20"
             return score
         }
         else {
@@ -1042,11 +1101,24 @@ function checkAnswer(number) {
         }
     }
     else if (number === 19) {
-        if (answer19 === 'peter' || answer19 === "Peter") {
+        if (answer19 === 'valkyrae' || answer19 === "Valkyrae") {
+            alert("yay")
+            document.getElementById("quest20").classList.remove("hidden")
+            score++
+            document.getElementById("scoring").innerHTML = score + "/20"
+            return score
+        }
+        else {
+            alert('no')
+            document.getElementById("quest20").classList.remove("hidden")
+        }
+    }
+    else if (number === 20) {
+        if (answer20 === 'peter' || answer20 === "Peter") {
             alert("yay")
             document.getElementById("done").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/19"
+            document.getElementById("scoring").innerHTML = score + "/20"
             return score
         }
         else {
@@ -1134,6 +1206,10 @@ function enter(question) {
         document.getElementById("enterBtn19").classList.add("hidden")
         checkAnswer(19)
     }
+    else if (question === 20) {
+        document.getElementById("enterBtn20").classList.add("hidden")
+        checkAnswer(20)
+    }
 }
 
 function question(problem) {
@@ -1209,10 +1285,14 @@ function question(problem) {
         document.getElementById("question18").classList.add("hidden")
         document.getElementById("question19").classList.remove("hidden")
     }
+    else if (problem === 20) {
+        document.getElementById("question19").classList.add("hidden")
+        document.getElementById("question20").classList.remove("hidden")
+    }
 }
 
 function finish() {
-    document.getElementById("question19").classList.add("hidden")
+    document.getElementById("question20").classList.add("hidden")
     document.getElementById("finishScreen").classList.remove("hidden")
     document.getElementById("scoring").classList.add("hidden")
     document.getElementById("message").innerHTML = "Congrats, You Got A " + score + "/19"

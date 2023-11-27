@@ -175,6 +175,10 @@ img {
     border: 8px solid rgb(80, 79, 79)
 }
 
+#tinaPhoto {
+    border: 8px solid coral
+}
+
 #descHome {
     margin-bottom: 20px;
 }
