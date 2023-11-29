@@ -77,6 +77,7 @@ button:active {
     transform: translateY(4px);
 
 }
+
 /* CSS for button animation */
 button:hover {
     background-color: #2980b9;
@@ -85,12 +86,12 @@ button:hover {
     /* Scale the button slightly on hover */
 }
 
-input[type="text"]{
-  padding: 10px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+input[type="text"] {
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 img {
@@ -156,7 +157,7 @@ img {
 }
 
 #peterPhoto {
-    border: 8px solid rgb(222,184,135)
+    border: 8px solid rgb(222, 184, 135)
 }
 
 #celinePhoto {
@@ -177,6 +178,10 @@ img {
 
 #tinaPhoto {
     border: 8px solid coral
+}
+
+#brodinPhoto {
+    border: 8px solid white
 }
 
 #descHome {
