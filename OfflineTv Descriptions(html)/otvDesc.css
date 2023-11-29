@@ -192,6 +192,14 @@ img {
     border: 8px solid darkgoldenrod
 }
 
+#ariaPhoto {
+    border: 8px solid mediumspringgreen
+}
+
+#tenzinPhoto {
+    border: 8px solid rgba(124, 19, 19, 0.719)
+}
+
 #descHome {
     margin-bottom: 20px;
 }
