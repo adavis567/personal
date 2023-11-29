@@ -184,6 +184,14 @@ img {
     border: 8px solid white
 }
 
+#brookePhoto {
+    border: 8px solid rgb(245, 206, 213)
+}
+
+#kyedaePhoto {
+    border: 8px solid darkgoldenrod
+}
+
 #descHome {
     margin-bottom: 20px;
 }
