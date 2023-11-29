@@ -1295,6 +1295,6 @@ function finish() {
     document.getElementById("question20").classList.add("hidden")
     document.getElementById("finishScreen").classList.remove("hidden")
     document.getElementById("scoring").classList.add("hidden")
-    document.getElementById("message").innerHTML = "Congrats, You Got A " + score + "/19"
+    document.getElementById("message").innerHTML = "Congrats, You Got A " + score + "/20"
     document.getElementById("home2").classList.remove("hidden")
 }
