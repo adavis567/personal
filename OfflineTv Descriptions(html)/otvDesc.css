@@ -200,6 +200,10 @@ img {
     border: 8px solid rgba(124, 19, 19, 0.719)
 }
 
+#albertPhoto {
+    border: 8px solid goldenrod
+}
+
 #descHome {
     margin-bottom: 20px;
 }
