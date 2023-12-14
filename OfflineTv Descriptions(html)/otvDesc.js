@@ -162,6 +162,12 @@ var sean = {
     "description": "funny speedster"
 }
 
+var edison = {
+    "height": "tall",
+    "personality": "IronMan",
+    "description": "sykkunos husband",
+}
+
 // Startup Functions
 
 function descriptions() {
@@ -338,6 +344,11 @@ function getMemberInfo() {
         + ", everyday, " + sean.personality + ", " + sean.description
         showPhoto("sean")
     }
+    else if (member === "edison") {
+        document.getElementById("memberInfo").innerHTML = "Edison is " + edison.height + ", "
+        + edison.personality + ", and " + edison.description
+        showPhoto("edison")
+    }
 }
 
 function showPhoto(person) {
@@ -504,794 +515,28 @@ function showPhoto(person) {
         document.getElementById("memberPhoto").innerHTML = photo
         removePhotos('sean')
     }
+    else if (person === "edison") {
+        photo = document.getElementById("edisonPhoto").innerHTML
+        document.getElementById("edisonPhoto").classList.remove("hidden")
+        document.getElementById("memberPhoto").innerHTML = photo
+        removePhotos('edison')
+    }
 }
 
 function removePhotos(person) {
-    if (person === 'all') {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    if (person === 'rae') {
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
+    const allPersons = [
+        "rae", "syk", "toast", "corpse", "miyoung", "leslie", "evon", "lily",
+        "michael", "scarra", "jodi", "john", "syd", "poki", "peter", "celine",
+        "janjan", "wondy", "abe", "tina", "brodin", "brooke", "kyedae", "aria",
+        "tenzin", "albert", "sean", "edison"
+    ];
 
-    }
-    else if (person === 'syk') {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === 'toast') {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "corpse") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "miyoung") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "leslie") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "evon") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "lily") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "michael") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "scarra") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "jodi") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "john") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "syd") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "poki") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "pp") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "celine") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "janjan") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "wondy") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "abe") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "tina") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "brodin") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "brooke") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "kyedae") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "aria") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "tenzin") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "albert") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("seanPhoto").classList.add("hidden")
-    }
-    else if (person === "sean") {
-        document.getElementById("raePhoto").classList.add("hidden")
-        document.getElementById("sykPhoto").classList.add("hidden")
-        document.getElementById("toastPhoto").classList.add("hidden")
-        document.getElementById("corpsePhoto").classList.add("hidden")
-        document.getElementById("miyoungPhoto").classList.add("hidden")
-        document.getElementById("lesliePhoto").classList.add("hidden")
-        document.getElementById("evonPhoto").classList.add("hidden")
-        document.getElementById("lilyPhoto").classList.add("hidden")
-        document.getElementById("michaelPhoto").classList.add("hidden")
-        document.getElementById("scarraPhoto").classList.add("hidden")
-        document.getElementById("jodiPhoto").classList.add("hidden")
-        document.getElementById("johnPhoto").classList.add("hidden")
-        document.getElementById("sydPhoto").classList.add("hidden")
-        document.getElementById("pokiPhoto").classList.add("hidden")
-        document.getElementById("peterPhoto").classList.add("hidden")
-        document.getElementById("celinePhoto").classList.add("hidden")
-        document.getElementById("janjanPhoto").classList.add("hidden")
-        document.getElementById("wondyPhoto").classList.add("hidden")
-        document.getElementById("abePhoto").classList.add("hidden")
-        document.getElementById("tinaPhoto").classList.add("hidden")
-        document.getElementById("brodinPhoto").classList.add("hidden")
-        document.getElementById("brookePhoto").classList.add("hidden")
-        document.getElementById("kyedaePhoto").classList.add("hidden")
-        document.getElementById("ariaPhoto").classList.add("hidden")
-        document.getElementById("tenzinPhoto").classList.add("hidden")
-        document.getElementById("albertPhoto").classList.add("hidden")
+    if (person === 'all' || allPersons.includes(person)) {
+        allPersons.forEach(p => {
+            if (p !== person) {
+                document.getElementById(`${p}Photo`).classList.add("hidden");
+            }
+        });
     }
 }
 
@@ -1306,7 +551,7 @@ function start() {
 }
 
 function checkAnswer(number) {
-    document.getElementById("scoring").innerHTML = score + "/27"
+    document.getElementById("scoring").innerHTML = score + "/28"
     var answer1 = document.getElementById("guess1").value
     var answer2 = document.getElementById("guess2").value
     var answer3 = document.getElementById("guess3").value
@@ -1334,12 +579,13 @@ function checkAnswer(number) {
     var answer25 = document.getElementById("guess25").value
     var answer26 = document.getElementById("guess26").value
     var answer27 = document.getElementById("guess27").value
+    var answer28 = document.getElementById("guess28").value
     if (number === 1) {
         if (answer1 === 'scarra' || answer1 === "Scarra") {
             alert("yay")
             document.getElementById("quest2").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score;
         }
         else {
@@ -1352,7 +598,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest3").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score;
         }
         else {
@@ -1365,7 +611,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest4").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score;
         }
         else {
@@ -1378,7 +624,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest5").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1391,7 +637,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest6").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1404,7 +650,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest7").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1417,7 +663,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest8").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1430,7 +676,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest9").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1456,7 +702,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest11").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1469,7 +715,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest12").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1482,7 +728,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest13").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1495,7 +741,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest14").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1508,7 +754,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest15").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1521,7 +767,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest16").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1534,7 +780,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest17").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1547,7 +793,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest18").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1560,7 +806,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest19").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1573,7 +819,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest20").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1586,7 +832,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest21").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score;
         }
         else {
@@ -1599,7 +845,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest22").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1612,7 +858,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest23").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1625,7 +871,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest24").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1634,11 +880,11 @@ function checkAnswer(number) {
         }
     }
     else if (number === 24) {
-        if (answer24 === 'tenzin' || answer24 === "Tenzin") {
+        if (answer24 === 'edison' || answer24 === "Edison") {
             alert("yay")
             document.getElementById("quest25").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1647,11 +893,11 @@ function checkAnswer(number) {
         }
     }
     else if (number === 25) {
-        if (answer25 === 'sean' || answer25 === "Sean") {
+        if (answer25 === 'tenzin' || answer25 === "Tenzin") {
             alert("yay")
             document.getElementById("quest26").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1660,11 +906,11 @@ function checkAnswer(number) {
         }
     }
     else if (number === 26) {
-        if (answer26 === 'valkyrae' || answer26 === "Valkyrae") {
+        if (answer26 === 'sean' || answer26 === "Sean") {
             alert("yay")
             document.getElementById("quest27").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1673,11 +919,24 @@ function checkAnswer(number) {
         }
     }
     else if (number === 27) {
-        if (answer27 === 'peter' || answer27 === "Peter") {
+        if (answer27 === 'valkyrae' || answer27 === "Valkyrae") {
+            alert("yay")
+            document.getElementById("quest28").classList.remove("hidden")
+            score++
+            document.getElementById("scoring").innerHTML = score + "/28"
+            return score
+        }
+        else {
+            alert('no')
+            document.getElementById("quest28").classList.remove("hidden")
+        }
+    }
+    else if (number === 28) {
+        if (answer28 === 'peter' || answer28 === "Peter") {
             alert("yay")
             document.getElementById("done").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/27"
+            document.getElementById("scoring").innerHTML = score + "/28"
             return score
         }
         else {
@@ -1797,6 +1056,10 @@ function enter(question) {
         document.getElementById("enterBtn27").classList.add("hidden")
         checkAnswer(27)
     }
+    else if(question === 28) {
+        document.getElementById("enterBtn28").classList.add("hidden")
+        checkAnswer(28)
+    }
 }
 
 function question(problem) {
@@ -1904,12 +1167,16 @@ function question(problem) {
         document.getElementById("question26").classList.add("hidden")
         document.getElementById("question27").classList.remove("hidden")
     }
+    else if (problem === 28) {
+        document.getElementById("question27").classList.add("hidden")
+        document.getElementById("question28").classList.remove("hidden")
+    }
 }
 
 function finish() {
-    document.getElementById("question27").classList.add("hidden")
+    document.getElementById("question28").classList.add("hidden")
     document.getElementById("finishScreen").classList.remove("hidden")
     document.getElementById("scoring").classList.add("hidden")
-    document.getElementById("message").innerHTML = "Congrats, You Got A " + score + "/27"
+    document.getElementById("message").innerHTML = "Congrats, You Got A " + score + "/28"
     document.getElementById("home2").classList.remove("hidden")
 }

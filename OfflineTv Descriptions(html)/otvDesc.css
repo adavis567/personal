@@ -105,7 +105,7 @@ img {
 }
 
 #sykPhoto {
-    border: 8px solid rgb(11, 117, 3)
+    border: 8px solid rgb(17, 138, 8)
 }
 
 #toastPhoto {
@@ -206,6 +206,10 @@ img {
 
 #seanPhoto {
     border: 8px solid skyblue
+}
+
+#edisonPhoto {
+    border: 8px solid rgb(0,86,63)
 }
 
 #descHome {
