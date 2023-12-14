@@ -1333,6 +1333,7 @@ function checkAnswer(number) {
     var answer24 = document.getElementById("guess24").value
     var answer25 = document.getElementById("guess25").value
     var answer26 = document.getElementById("guess26").value
+    var answer27 = document.getElementById("guess27").value
     if (number === 1) {
         if (answer1 === 'scarra' || answer1 === "Scarra") {
             alert("yay")
@@ -1646,7 +1647,7 @@ function checkAnswer(number) {
         }
     }
     else if (number === 25) {
-        if (answer25 === 'valkyrae' || answer25 === "Valkyrae") {
+        if (answer25 === 'sean' || answer25 === "Sean") {
             alert("yay")
             document.getElementById("quest26").classList.remove("hidden")
             score++
@@ -1659,7 +1660,20 @@ function checkAnswer(number) {
         }
     }
     else if (number === 26) {
-        if (answer26 === 'peter' || answer26 === "Peter") {
+        if (answer26 === 'valkyrae' || answer26 === "Valkyrae") {
+            alert("yay")
+            document.getElementById("quest27").classList.remove("hidden")
+            score++
+            document.getElementById("scoring").innerHTML = score + "/27"
+            return score
+        }
+        else {
+            alert('no')
+            document.getElementById("quest27").classList.remove("hidden")
+        }
+    }
+    else if (number === 27) {
+        if (answer27 === 'peter' || answer27 === "Peter") {
             alert("yay")
             document.getElementById("done").classList.remove("hidden")
             score++
@@ -1779,6 +1793,10 @@ function enter(question) {
         document.getElementById("enterBtn26").classList.add("hidden")
         checkAnswer(26)
     }
+    else if(question === 27) {
+        document.getElementById("enterBtn27").classList.add("hidden")
+        checkAnswer(27)
+    }
 }
 
 function question(problem) {
@@ -1882,10 +1900,14 @@ function question(problem) {
         document.getElementById("question25").classList.add("hidden")
         document.getElementById("question26").classList.remove("hidden")
     }
+    else if (problem === 27) {
+        document.getElementById("question26").classList.add("hidden")
+        document.getElementById("question27").classList.remove("hidden")
+    }
 }
 
 function finish() {
-    document.getElementById("question26").classList.add("hidden")
+    document.getElementById("question27").classList.add("hidden")
     document.getElementById("finishScreen").classList.remove("hidden")
     document.getElementById("scoring").classList.add("hidden")
     document.getElementById("message").innerHTML = "Congrats, You Got A " + score + "/27"
