@@ -212,6 +212,10 @@ img {
     border: 8px solid rgb(0,86,63)
 }
 
+#ryanPhoto {
+    border: 8px solid rgb(208, 126, 224)
+}
+
 #descHome {
     margin-bottom: 20px;
 }
