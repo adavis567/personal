@@ -65,6 +65,8 @@ var edison = otv("tall", "IronMan", "sykkunos husband")
 
 var ryan = otv("regular", "nigahigagirlygirlgina", "#1 JanJan impersonator")
 
+var jaime = otv("short", "If it doesn't match my aesthetic, don't give it to me", "I like cute things and have the best style of clothes")
+
 // Startup Functions
 
 function descriptions() {
@@ -251,6 +253,11 @@ function getMemberInfo() {
             + ryan.personality + ", and is the " + ryan.description
         showPhoto("ryan")
     }
+    else if (member === "jaime") {
+        document.getElementById("memberInfo").innerHTML = "Jaime is " + jaime.height + ". Jaime, any words? '"
+        + jaime.personality + ", but " + jaime.description
+        showPhoto("jaime")
+    }
 }
 
 function showPhoto(person) {
@@ -268,7 +275,7 @@ function removePhotos(person) {
         "rae", "syk", "toast", "corpse", "miyoung", "leslie", "evon", "lily",
         "michael", "scarra", "jodi", "john", "syd", "poki", "peter", "celine",
         "janjan", "wondy", "abe", "tina", "brodin", "brooke", "kyedae", "aria",
-        "tenzin", "albert", "sean", "edison", "ryan"
+        "tenzin", "albert", "sean", "edison", "ryan", "jaime"
     ];
 
     if (person === 'all' || allPersons.includes(person)) {
@@ -321,6 +328,7 @@ function checkAnswer(number) {
     var answer27 = document.getElementById("guess27").value
     var answer28 = document.getElementById("guess28").value
     var answer29 = document.getElementById("guess29").value
+    var answer30 = document.getElementById("guess30").value
     if (number === 1) {
         if (answer1 === 'scarra' || answer1 === "Scarra") {
             alert("yay")
@@ -397,6 +405,19 @@ function checkAnswer(number) {
         else {
             alert('no')
             document.getElementById("quest7").classList.remove("hidden")
+        }
+    }
+    else if (number === 7) {
+        if (answer7 === 'jaime' || answer7 === "Jaime") {
+            alert("yay")
+            document.getElementById("quest8").classList.remove("hidden")
+            score++
+            document.getElementById("scoring").innerHTML = score + "/29"
+            return score
+        }
+        else {
+            alert('no')
+            document.getElementById("quest8").classList.remove("hidden")
         }
     }
     else if (number === 7) {
