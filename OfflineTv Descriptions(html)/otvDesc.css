@@ -216,6 +216,10 @@ img {
     border: 8px solid rgb(208, 126, 224)
 }
 
+#jaimePhoto {
+    border: 8px solid #a2cffe
+}
+
 #descHome {
     margin-bottom: 20px;
 }
