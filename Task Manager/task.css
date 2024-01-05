@@ -1,0 +1,12 @@
+body {
+    background-color: darkgrey;
+}
+
+.hidden {
+    display: none
+}
+
+#tasks {
+    text-align: center;
+    margin-top: 3%;
+}
