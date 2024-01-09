@@ -220,6 +220,10 @@ img {
     border: 8px solid #a2cffe
 }
 
+#ludPhoto {
+    border: 8px solid rgb(8, 64, 11)
+}
+
 #descHome {
     margin-bottom: 20px;
 }
