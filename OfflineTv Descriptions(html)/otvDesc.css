@@ -113,7 +113,7 @@ img {
 }
 
 #corpsePhoto {
-    border: 8px solid purple
+    border: 8px solid rgb(73, 7, 99)
 }
 
 #miyoungPhoto {
@@ -222,6 +222,10 @@ img {
 
 #ludPhoto {
     border: 8px solid rgb(8, 64, 11)
+}
+
+#tarikPhoto {
+    border: 8px solid rgb(115, 17, 153)
 }
 
 #descHome {
