@@ -6,7 +6,34 @@ body {
     display: none
 }
 
-#tasks {
+button {
+    padding: 10px 10px;
+    font-size: 19px;
     text-align: center;
-    margin-top: 3%;
+    margin-left: 50%;
+    cursor: pointer;
+    outline: none;
+    color: #f7f1f1;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 4px 4px #999;
+    background-color: #070707;
+    /* Default background color */
+    transition: background-color 0.3s, transform 0.2s;
+    /* Transition on background color and transform (scale) */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+    /* New background color on hover */
+    transform: scale(1.1);
+    /* Scale the button slightly on hover */
+}
+
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+
 }
