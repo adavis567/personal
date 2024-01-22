@@ -12,19 +12,14 @@
 </head>
 
 <body>
-<div id="tasks">
-    <div id="task1">
-        <button id="addTask1" onClick="addTask1()">+ Add Task</button>
-        <div id="toDo1" class="hidden">
-            <p>Hi</p>
+    <div id="taskContainer">
+        <h2>Task Manager</h2>
+        <div>
+          <input type="text" id="taskInput" placeholder="Enter task...">
+          <button onclick="addTask()">Add Task</button>
         </div>
-    </div>
-    <div id="task2" class="hidden">
-        <p1>Hey</p1>
-    </div>
-    <div id="task3" class="hidden">
-        <p1>Hello</p1>
-    </div>
+        <div id="taskList"></div>
+      </div>
 </div>
 </body>
 
