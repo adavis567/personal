@@ -1,74 +1,37 @@
-.hidden {
-    display: none
-}
-
-button {
-    padding: 10px 10px;
-    font-size: 19px;
-    text-align: center;
-    margin-left: 50%;
-    cursor: pointer;
-    outline: none;
-    color: #f7f1f1;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 4px 4px #999;
-    background-color: #070707;
-    /* Default background color */
-    transition: background-color 0.3s, transform 0.2s;
-    /* Transition on background color and transform (scale) */
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #2980b9;
-    /* New background color on hover */
-    transform: scale(1.1);
-    /* Scale the button slightly on hover */
-}
-
-button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-
-}
-
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: darkgrey;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
 
-  #taskContainer {
-    max-width: 400px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+#taskContainer {
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-  .task {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-  }
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
 
-  .task input[type="text"] {
-    border: none;
-    outline: none;
-    width: 80%;
-  }
+.task input[type="text"] {
+  border: none;
+  outline: none;
+  width: 60%;
+}
 
-  .task button {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-  }
+.task button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
