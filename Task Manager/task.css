@@ -1,6 +1,6 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
+  background-color: #6e6d6d59;
   margin: 0;
   padding: 0;
   display: flex;
@@ -37,7 +37,7 @@ h2 {
 }
 
 button {
-  padding: 10px 15px;
+  padding: 5px 10px;
   font-size: 16px;
   text-align: center;
   cursor: pointer;
@@ -57,11 +57,19 @@ button:hover {
 
 .task {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row; /* Maintain row layout */
   align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
 }
+
+.task input[type="text"],
+.task select {
+  margin-right: 3px; /* Add some right margin for spacing between input and dropdown */
+}
+
+
 
 .task input[type="text"] {
   flex: 1;
@@ -74,7 +82,7 @@ button:hover {
 .task button {
   padding: 8px 12px;
   font-size: 14px;
-  margin-left: 8px;
+  margin-left: 4px;
   cursor: pointer;
   outline: none;
   color: #fff;
@@ -82,9 +90,60 @@ button:hover {
   border-radius: 4px;
   background-color: #e74c3c;
   transition: background-color 0.3s, transform 0.2s;
+  
 }
 
 .task button:hover {
   background-color: #c0392b;
   transform: scale(1.05);
+}
+
+/* Updated CSS for Dropdown Styling */
+
+#prioritySelect {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #3498db;
+  /* Match the button color */
+  border-radius: 4px;
+  background-color: #fff;
+  color: #555;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+  font-size: 10.2px;
+  margin-left: 5px;
+  /* Adjust the font size as needed */
+}
+
+#prioritySelect:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #f2faff;
+  /* Highlight background on focus */
+}
+
+#prioritySelect::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #3498db;
+  /* Match the button color */
+  pointer-events: none;
+}
+
+/* Updated Custom arrow icon */
+#prioritySelect:hover+ ::after,
+#prioritySelect:focus+ ::after {
+  color: #007bff;
+  /* Change arrow color on hover/focus */
+}
+
+/* Updated Custom arrow icon animation */
+#prioritySelect::after {
+  transition: color 0.3s;
 }
