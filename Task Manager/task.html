@@ -6,19 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Task Manager</title>
   <link rel="stylesheet" href="task.css">
-  <script src="task.js"></script>
+  <script src="task.js" defer></script>
   <link rel="icon" type="image/x-icon" href="task photos/Task Manager.png">
 </head>
 
 <body>
 
   <div id="taskContainer">
-    <h2>Task Manager</h2>
-    <div>
-      <input type="text" id="taskInput" placeholder="Enter task...">
-      <button onclick="addTask()">Add Task</button>
+    <div id="addTaskContainer">
+      <h2>Add Task</h2>
+      <div id="taskInputContainer">
+        <input type="text" id="taskInput" placeholder="Enter task...">
+        <input type="date" id="dueDate">
+        <input type="text" id="priority" placeholder="Priority">
+        <button onclick="addTask()">Add Task</button>
+      </div>
     </div>
-    <div id="taskList"></div>
+    <div id="taskListContainer">
+      <h2>Task List</h2>
+      <div id="taskList"></div>
+    </div>
   </div>
 
 </body>

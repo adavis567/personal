@@ -1,70 +1,68 @@
-function createTaskElement(taskValue) {
+function createTaskElement(taskValue, dueDate, priority) {
   const taskDiv = document.createElement('div');
   taskDiv.className = 'task';
+
+  const completeCheckbox = document.createElement('input');
+  completeCheckbox.type = 'checkbox';
+  completeCheckbox.addEventListener('change', () => {
+    taskText.classList.toggle('complete', completeCheckbox.checked);
+    updateLocalStorage();
+  });
 
   const taskText = document.createElement('input');
   taskText.type = 'text';
   taskText.value = taskValue;
   taskText.disabled = true;
 
-  const editButton = document.createElement('button');
-  editButton.textContent = 'Edit';
-  editButton.onclick = function () {
+  const dueDateText = document.createElement('span');
+  dueDateText.textContent = dueDate || 'No due date';
+
+  const priorityText = document.createElement('span');
+  priorityText.textContent = priority || 'No priority';
+
+  const editButton = createButton('Edit', () => {
     taskText.disabled = !taskText.disabled;
     editButton.textContent = taskText.disabled ? 'Edit' : 'Save';
     updateLocalStorage();
-  };
-
-  const deleteButton = document.createElement('button');
-  deleteButton.textContent = 'Delete';
-  deleteButton.onclick = function () {
-    taskDiv.remove();
-    updateLocalStorage();
-  };
-
-  const priorityDropdown = document.createElement('select');
-  priorityDropdown.id = 'prioritySelect';  // Add an ID for styling
-  priorityDropdown.className = 'select-wrapper';
-
-
-
-  const defaultOption = document.createElement('option');
-  defaultOption.value = '';
-  defaultOption.text = 'Choose Priority';
-  priorityDropdown.appendChild(defaultOption);
-
-  const options = [
-    { value: 'high', text: 'Do Very Soon' },
-    { value: 'medium', text: 'Can Wait a Bit' },
-    { value: 'low', text: 'Not Too Important' },
-  ];
-
-  options.forEach(optionData => {
-    const option = document.createElement('option');
-    option.value = optionData.value;
-    option.text = optionData.text;
-    priorityDropdown.appendChild(option);
   });
 
+  const deleteButton = createButton('Delete', () => {
+    taskDiv.remove();
+    updateLocalStorage();
+  });
+
+  taskDiv.appendChild(completeCheckbox);
   taskDiv.appendChild(taskText);
+  taskDiv.appendChild(dueDateText);
+  taskDiv.appendChild(priorityText);
   taskDiv.appendChild(editButton);
   taskDiv.appendChild(deleteButton);
-  taskDiv.appendChild(priorityDropdown);
 
   return taskDiv;
 }
 
+function createButton(text, clickHandler) {
+  const button = document.createElement('button');
+  button.textContent = text;
+  button.addEventListener('click', clickHandler);
+  return button;
+}
+
 function addTask() {
   const taskInput = document.getElementById('taskInput');
+  const dueDateInput = document.getElementById('dueDate');
+  const priorityInput = document.getElementById('priority');
   const taskList = document.getElementById('taskList');
 
   if (taskInput.value.trim() !== '') {
-    const taskDiv = createTaskElement(taskInput.value);
+    const taskDiv = createTaskElement(taskInput.value, dueDateInput.value, priorityInput.value || 'No priority');
 
     taskList.appendChild(taskDiv);
     updateLocalStorage();
 
     taskInput.value = '';
+    dueDateInput.value = '';
+    priorityInput.value = '';
   }
 }
 
@@ -73,8 +71,17 @@ function updateLocalStorage() {
   const taskDivs = document.querySelectorAll('.task');
 
   taskDivs.forEach(taskDiv => {
+    const completeCheckbox = taskDiv.querySelector('input[type="checkbox"]');
     const taskText = taskDiv.querySelector('input[type="text"]');
-    tasks.push(taskText.value);
+    const dueDateText = taskDiv.querySelector('span');
+    const priorityText = taskDiv.querySelector('span:nth-child(3)') || document.createElement('span');
+
+    tasks.push({
+      task: taskText.value,
+      dueDate: dueDateText.textContent,
+      priority: priorityText.textContent,
+      complete: completeCheckbox.checked,
+    });
   });
 
   localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -82,12 +89,17 @@ function updateLocalStorage() {
 
 function loadTasks() {
   const taskList = document.getElementById('taskList');
-  const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  try {
+    const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-  storedTasks.forEach(task => {
-    const taskDiv = createTaskElement(task);
-    taskList.appendChild(taskDiv);
-  });
+    storedTasks.forEach(task => {
+      const taskDiv = createTaskElement(task.task, task.dueDate, task.priority);
+      taskDiv.querySelector('input[type="checkbox"]').checked = task.complete;
+      taskList.appendChild(taskDiv);
+    });
+  } catch (error) {
+    console.error('Error loading tasks:', error);
+  }
 }
 
 loadTasks();
