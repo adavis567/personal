@@ -16,9 +16,11 @@ function createTaskElement(taskValue, dueDate, priority) {
 
   const dueDateText = document.createElement('span');
   dueDateText.textContent = dueDate || 'No due date';
+  dueDateText.classList.add('dueDate');
 
   const priorityText = document.createElement('span');
   priorityText.textContent = priority || 'No priority';
+  priorityText.classList.add('priority');
 
   const editButton = createButton('Edit', () => {
     taskText.disabled = !taskText.disabled;
@@ -73,8 +75,8 @@ function updateLocalStorage() {
   taskDivs.forEach(taskDiv => {
     const completeCheckbox = taskDiv.querySelector('input[type="checkbox"]');
     const taskText = taskDiv.querySelector('input[type="text"]');
-    const dueDateText = taskDiv.querySelector('span');
-    const priorityText = taskDiv.querySelector('span:nth-child(3)') || document.createElement('span');
+    const dueDateText = taskDiv.querySelector('.dueDate');
+    const priorityText = taskDiv.querySelector('.priority');
 
     tasks.push({
       task: taskText.value,

@@ -5,7 +5,7 @@ body {
   padding: 0;
   display: flex;
   align-items: center;
-  justify-content: center; /* Center content horizontally */
+  justify-content: center;
   min-height: 100vh;
 }
 
@@ -24,7 +24,7 @@ body {
   overflow-y: auto;
   padding: 40px;
   box-sizing: border-box;
-  flex: 1; /* Take up available space */
+  flex: 1;
 }
 
 #addTaskContainer {
@@ -40,11 +40,11 @@ body {
   padding: 20px;
   box-sizing: border-box;
   display: flex;
-  flex-direction: column; /* Display tasks in a column layout */
-  align-items: center; /* Center tasks horizontally */
-  justify-content: center; /* Center tasks vertically */
-  gap: 10px; /* Adjust the gap between tasks as needed */
-  overflow-y: auto; /* Enable vertical scrolling if needed */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow-y: auto;
 }
 
 h2 {
@@ -85,12 +85,27 @@ button:hover {
 }
 
 .task {
-  flex-basis: calc(33.33% - 10px); /* Adjust the width of each task */
+  flex-basis: calc(33.33% - 10px);
   box-sizing: border-box;
   border: 1px solid #ced4da;
   border-radius: 8px;
   padding: 16px;
-  margin-bottom: 10px; /* Adjust the margin between tasks as needed */
+  margin-bottom: 10px;
+}
+
+.task span {
+  margin-bottom: 12px;
+  display: block;
+}
+
+.task .dueDate,
+.task .priority {
+  margin-bottom: 8px;
+  display: block; /* Ensure each span takes the full width */
+}
+
+.task .priority {
+  margin-top: 8px; /* Add margin at the top of the priority */
 }
 
 .task input[type="text"],
