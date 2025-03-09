@@ -5,3 +5,8 @@ body {
 .hidden {
     display:none
 }
+
+img {
+    width: 250px;
+    height: 250px
+}
