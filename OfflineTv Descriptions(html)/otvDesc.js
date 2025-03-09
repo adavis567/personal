@@ -467,7 +467,7 @@ function checkAnswer(number) {
             alert("yay")
             document.getElementById("quest11").classList.remove("hidden")
             score++
-            document.getElementById("scoring").innerHTML = score + "/22"
+            document.getElementById("scoring").innerHTML = score + "/32"
             return score
         }
         else {

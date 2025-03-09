@@ -33,6 +33,30 @@ function njMembers() {
     document.getElementById("njMemBut").classList.add("hidden")
     document.getElementById("njInfoBut").classList.add("hidden")
     document.getElementById("njSongsBut").classList.add("hidden")
+    document.getElementById("njMemBack").classList.add("hidden")
+    document.getElementById("minji").classList.add("hidden")
+    document.getElementById("minjiBut").classList.remove("hidden")
+    document.getElementById("hanni").classList.add("hidden")
+    document.getElementById("hanniBut").classList.remove("hidden")
+}
+
+function njMemBack() {
+    document.getElementById("njMemBack").classList.add("hidden")
+    document.getElementById("njBackBut").classList.remove("hidden")
+    document.getElementById("minji").classList.add("hidden")
+    document.getElementById("hanni").classList.add("hidden")
+    document.getElementById("minjiBut").classList.remove("hidden")
+    document.getElementById("hanniBut").classList.remove("hidden")
+}
+
+
+function minji() {
+    document.getElementById("njBackBut").classList.add("hidden")
+    document.getElementById("njMemBack").classList.remove("hidden")
+    document.getElementById("minjiBut").classList.add("hidden")
+    document.getElementById("minji").classList.remove("hidden")
+    document.getElementById("hanniBut").classList.add("hidden")
+    document.getElementById("hanni").classList.add("hidden")
 }
 
 function njInfo() {
