@@ -2,6 +2,7 @@ function home() {
     document.getElementById("newJeans").classList.add("hidden")
     document.getElementById("njBackBut").classList.add("hidden")
     document.getElementById("groups").classList.remove("hidden")
+    document.body.style.backgroundImage = 'none'
 }
 
 function njBack() {
@@ -23,6 +24,7 @@ function newJeans() {
     document.getElementById("njMemBut").classList.remove("hidden")
     document.getElementById("njInfoBut").classList.remove("hidden")
     document.getElementById("njSongsBut").classList.remove("hidden")
+    document.body.style.backgroundImage="url('Photos/newJeans.webp')"
 }
 
 function njMembers() {
