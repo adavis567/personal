@@ -108,7 +108,11 @@ function njInfo() {
 
 //Button to bring up new jeans song section
 function njSongs() {
+    document.getElementById("njSongsBut").classList.add("hidden")
     document.getElementById("njSongs").classList.remove("hidden")
     document.getElementById("njInfo").classList.add("hidden")
+    document.getElementById("njInfoBut").classList.add("hidden")
     document.getElementById("njMembers").classList.add("hidden")
+    document.getElementById("njMemBut").classList.add("hidden")
+    document.getElementById("njBackBut").classList.remove("hidden")
 }
