@@ -26,6 +26,10 @@ function home() {
     document.getElementById("njBackBut").classList.add("hidden")
     document.getElementById("groups").classList.remove("hidden")
     document.body.style.backgroundImage = 'none'
+    document.querySelectorAll('.group-audio').forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+      });
 }
 
 //Back Button to bring you back to new jeans home
@@ -37,6 +41,10 @@ function njBack() {
     document.getElementById("njSongs").classList.add("hidden")
     document.getElementById("njSongsBut").classList.remove("hidden")
     document.getElementById("njBackBut").classList.add("hidden")
+    document.querySelectorAll('.group-audio').forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+      });
 }
 
 //Button to bring you to the new jeans section
@@ -68,7 +76,7 @@ function njMembers() {
     document.getElementById("hanniBut").classList.remove("hidden")
 }
 
-//Button to bring you 
+//Button to bring you back to members section
 function njMemBack() {
     document.getElementById("njMemBack").classList.add("hidden")
     document.getElementById("njBackBut").classList.remove("hidden")
@@ -109,13 +117,15 @@ function njInfo() {
 
 //Button to bring up new jeans song section
 function njSongs() {
-    document.getElementById("njSongsBut").classList.add("hidden")
-    document.getElementById("njSongs").classList.remove("hidden")
-    document.getElementById("njInfo").classList.add("hidden")
-    document.getElementById("njInfoBut").classList.add("hidden")
-    document.getElementById("njMembers").classList.add("hidden")
-    document.getElementById("njMemBut").classList.add("hidden")
-    document.getElementById("njBackBut").classList.remove("hidden")
+    document.getElementById("njSongsBut").classList.add("hidden");
+    document.getElementById("njSongs").classList.remove("hidden");
+    document.getElementById("njInfo").classList.add("hidden");
+    document.getElementById("njInfoBut").classList.add("hidden");
+    document.getElementById("njMembers").classList.add("hidden");
+    document.getElementById("njMemBut").classList.add("hidden");
+    document.getElementById("njBackBut").classList.remove("hidden");
+    disableControls();
+    document.getElementById("hypeBoy").currentTime=0
 }
 
 //Songs
@@ -137,3 +147,12 @@ function enableControls() {
     const hypeBoy = document.getElementById("hypeBoy");
     hypeBoy.controls = true;
 }
+function disableControls() {
+    const hypeBoy = document.getElementById("hypeBoy");
+    hypeBoy.controls = false;
+}
+//Function to Reset Audio
+document.querySelectorAll('.group-audio').forEach(audio => {
+    audio.pause();
+    audio.currentTime = 0;
+  });
