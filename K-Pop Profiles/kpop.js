@@ -29,7 +29,7 @@ function home() {
     document.querySelectorAll('.group-audio').forEach(audio => {
         audio.pause();
         audio.currentTime = 0;
-      });
+    });
 }
 
 //Back Button to bring you back to new jeans home
@@ -41,10 +41,11 @@ function njBack() {
     document.getElementById("njSongs").classList.add("hidden")
     document.getElementById("njSongsBut").classList.remove("hidden")
     document.getElementById("njBackBut").classList.add("hidden")
+    //Resets the songs
     document.querySelectorAll('.group-audio').forEach(audio => {
         audio.pause();
         audio.currentTime = 0;
-      });
+    });
 }
 
 //Button to bring you to the new jeans section
@@ -57,6 +58,7 @@ function newJeans() {
     document.getElementById("njMemBut").classList.remove("hidden")
     document.getElementById("njInfoBut").classList.remove("hidden")
     document.getElementById("njSongsBut").classList.remove("hidden")
+    //Changes the background image
     document.body.style.backgroundImage = "url('Photos/newJeans.webp')"
 }
 
@@ -105,14 +107,15 @@ function njInfo() {
     document.getElementById("njSongs").classList.add("hidden")
     document.getElementById("njSongsBut").classList.add("hidden")
     document.getElementById("njBackBut").classList.remove("hidden")
-    document.getElementById("njInfo").innerHTML = 
-    "Debut: " + NewJeans.debut + "<br>" + 
-    "Members: " + NewJeans.members + "<br>" + 
-    "Description: " + NewJeans.desc + "<br>" + 
-    "Fandom Name: " + NewJeans.fandom + "<br>" +
-    "Awards: " + NewJeans.awards + "<br>" +
-    "Label: " + NewJeans.label + "<br>" + 
-    "<img src='Photos/newJeansGif.gif'>"
+    //Places the Info into place
+    document.getElementById("njInfo").innerHTML =
+        "Debut: " + NewJeans.debut + "<br>" +
+        "Members: " + NewJeans.members + "<br>" +
+        "Description: " + NewJeans.desc + "<br>" +
+        "Fandom Name: " + NewJeans.fandom + "<br>" +
+        "Awards: " + NewJeans.awards + "<br>" +
+        "Label: " + NewJeans.label + "<br>" +
+        "<img src='Photos/newJeansGif.gif'>"
 }
 
 //Button to bring up new jeans song section
@@ -125,7 +128,6 @@ function njSongs() {
     document.getElementById("njMemBut").classList.add("hidden");
     document.getElementById("njBackBut").classList.remove("hidden");
     disableControls();
-    document.getElementById("hypeBoy").currentTime=0
 }
 
 //Songs
@@ -133,7 +135,7 @@ function njSongs() {
 //Hype Boy
 function playHypeBoy() {
     const hypeBoy = document.getElementById("hypeBoy");
-    
+
     if (hypeBoy.paused) {
         hypeBoy.play();
     } else {
@@ -147,12 +149,14 @@ function enableControls() {
     const hypeBoy = document.getElementById("hypeBoy");
     hypeBoy.controls = true;
 }
+
 function disableControls() {
     const hypeBoy = document.getElementById("hypeBoy");
     hypeBoy.controls = false;
 }
+
 //Function to Reset Audio
 document.querySelectorAll('.group-audio').forEach(audio => {
     audio.pause();
     audio.currentTime = 0;
-  });
+});
