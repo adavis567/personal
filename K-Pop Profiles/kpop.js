@@ -103,7 +103,8 @@ function njInfo() {
     "Description: " + NewJeans.desc + "<br>" + 
     "Fandom Name: " + NewJeans.fandom + "<br>" +
     "Awards: " + NewJeans.awards + "<br>" +
-    "Label: " + NewJeans.label + "<br>"
+    "Label: " + NewJeans.label + "<br>" + 
+    "<img src='Photos/newJeansGif.gif'>"
 }
 
 //Button to bring up new jeans song section
@@ -115,4 +116,15 @@ function njSongs() {
     document.getElementById("njMembers").classList.add("hidden")
     document.getElementById("njMemBut").classList.add("hidden")
     document.getElementById("njBackBut").classList.remove("hidden")
+}
+
+//Button that plays Album 1 title track
+function playHypeBoy() {
+    const hypeBoy = document.getElementById("hypeBoy");
+    if (hypeBoy.paused) {
+        hypeBoy.play();
+    } else {
+        hypeBoy.pause()
+    }
+
 }
