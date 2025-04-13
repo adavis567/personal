@@ -118,13 +118,22 @@ function njSongs() {
     document.getElementById("njBackBut").classList.remove("hidden")
 }
 
-//Button that plays Album 1 title track
+//Songs
+
+//Hype Boy
 function playHypeBoy() {
     const hypeBoy = document.getElementById("hypeBoy");
+    
     if (hypeBoy.paused) {
         hypeBoy.play();
     } else {
-        hypeBoy.pause()
+        hypeBoy.pause();
     }
 
+    enableControls();
+}
+//Hype Boy Controls
+function enableControls() {
+    const hypeBoy = document.getElementById("hypeBoy");
+    hypeBoy.controls = true;
 }
