@@ -100,7 +100,7 @@ function njInfo() {
     document.getElementById("njInfo").innerHTML = 
     "Debut: " + NewJeans.debut + "<br>" + 
     "Members: " + NewJeans.members + "<br>" + 
-    "Description: " + NewJeans.desc + "<br" + 
+    "Description: " + NewJeans.desc + "<br>" + 
     "Fandom Name: " + NewJeans.fandom + "<br>" +
     "Awards: " + NewJeans.awards + "<br>" +
     "Label: " + NewJeans.label + "<br>"
