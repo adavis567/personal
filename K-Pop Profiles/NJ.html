@@ -1,40 +1,22 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>
-        K-Pop Profiles
+        New Jeans
     </title>
     <link rel="stylesheet" href="kpop.css">
-    <script src="kpop.js"></script>
+    <script src="NJ.js"></script>
 </head>
-
-<body id="background">
-
-    <!--Area for all the groups-->
-    <div id="groups">
-
-        <h1>K-Pop Profiles</h1>
-
-        <!--New Jeans Button-->
-        <button onClick="newJeans()">
-
-            <img src="Photos/NewJeans/newJeansLogo.jpg">
-
-        </button>
-
-        <!--Twice Button-->
-        <button onClick="twice()">
-            <img src="Photos/Twice/twiceLogo.jpg">
-        </button>
-
-    </div>
-
+<body id="background" background="Photos/NewJeans/newJeans.webp">  
     <!--New Jeans Code-->
-    <div id="newJeans" class="hidden">
+    <div id="newJeans">
 
         <!--Home Button-->
-        <button onClick="home()">Home</button>
+        <button onClick="location.href='index.html'">
+
+            Home
+
+        </button>
 
         <!--New Jeans Specific Back Button-->
         <button onClick="njBack()" class="hidden" id="njBackBut">
@@ -160,11 +142,4 @@
             
         </div>
     </div>
-
-    <!--Twice Code-->
-    <div id="twice" class="hidden">
-
-    </div>
-</body>
-
 </html>
