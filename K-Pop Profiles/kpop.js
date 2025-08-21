@@ -42,10 +42,8 @@ function njBack() {
     document.getElementById("njSongsBut").classList.remove("hidden")
     document.getElementById("njBackBut").classList.add("hidden")
     //Resets the songs
-    document.querySelectorAll('.group-audio').forEach(audio => {
-        audio.pause();
-        audio.currentTime = 0;
-    });
+    stopAudio()
+ 
 }
 
 //Button to bring you to the new jeans section
@@ -59,7 +57,7 @@ function newJeans() {
     document.getElementById("njInfoBut").classList.remove("hidden")
     document.getElementById("njSongsBut").classList.remove("hidden")
     //Changes the background image
-    document.body.style.backgroundImage = "url('Photos/newJeans.webp')"
+    document.body.style.backgroundImage = "url('Photos/NewJeans/newJeans.webp')"
 }
 
 //Button to bring up the info for the members of new jeans 
@@ -115,7 +113,7 @@ function njInfo() {
         "Fandom Name: " + NewJeans.fandom + "<br>" +
         "Awards: " + NewJeans.awards + "<br>" +
         "Label: " + NewJeans.label + "<br>" +
-        "<img src='Photos/newJeansGif.gif'>"
+        "<img src='Photos/NewJeans/newJeansGif.gif'>"
 }
 
 //Button to bring up new jeans song section
@@ -134,6 +132,8 @@ function njSongs() {
 
 //Hype Boy
 function playHypeBoy() {
+    disableControls()
+    stopAudio()
     const hypeBoy = document.getElementById("hypeBoy");
 
     if (hypeBoy.paused) {
@@ -141,22 +141,52 @@ function playHypeBoy() {
     } else {
         hypeBoy.pause();
     }
-
-    enableControls();
+    enableControlsHype();
+    document.getElementById("album2").classList.add("hidden")
+    document.getElementById("album1Area").classList.remove("hidden")
 }
+
 //Hype Boy Controls
-function enableControls() {
+function enableControlsHype() {
     const hypeBoy = document.getElementById("hypeBoy");
     hypeBoy.controls = true;
 }
 
-function disableControls() {
-    const hypeBoy = document.getElementById("hypeBoy");
-    hypeBoy.controls = false;
+//OMG
+function playOMG() {
+    disableControls()
+    stopAudio()
+    const OMG = document.getElementById("OMG");
+
+    if (OMG.paused) {
+        OMG.play();
+    } else {
+        OMG.pause();
+    }
+
+    enableControlsOMG();
+    document.getElementById("album1").classList.add("hidden")
+    document.getElementById("album2Area").classList.remove("hidden")
 }
 
-//Function to Reset Audio
-document.querySelectorAll('.group-audio').forEach(audio => {
+//OMG Controls
+function enableControlsOMG() {
+    const OMG = document.getElementById("OMG");
+    OMG.controls = true;
+}
+
+//Functions to Reset Audio
+function stopAudio() {
+    document.querySelectorAll('.group-audio').forEach(audio => {
     audio.pause();
     audio.currentTime = 0;
 });
+}
+
+//Function to Remove Controls
+function disableControls() {
+    const hypeBoy = document.getElementById("hypeBoy");
+    hypeBoy.controls = false;
+    const OMG = document.getElementById("OMG");
+    OMG.controls = false;
+}

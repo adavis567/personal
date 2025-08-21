@@ -19,13 +19,13 @@
         <!--New Jeans Button-->
         <button onClick="newJeans()">
 
-            <img src="Photos/newJeansLogo.jpg">
+            <img src="Photos/NewJeans/newJeansLogo.jpg">
 
         </button>
 
         <!--Twice Button-->
         <button onClick="twice()">
-            <img src="Photos/twiceLogo.jpg">
+            <img src="Photos/Twice/twiceLogo.jpg">
         </button>
 
     </div>
@@ -46,7 +46,7 @@
         <!--Button to bring Up Members Section of New Jeans-->
         <button onClick="njMembers()" id="njMemBut">
 
-            <img src="Photos/newJeansMembers.png">
+            <img src="Photos/NewJeans/newJeansMembers.png">
             <p> Members</p>
 
         </button>
@@ -54,14 +54,14 @@
         <!--Button to bring up info section of new jeans-->
         <button onClick="njInfo()" id="njInfoBut">
 
-            <img src="Photos/newJeansLightstick.webp">
+            <img src="Photos/NewJeans/newJeansLightstick.webp">
             <p>Info</p>
 
         </button>
 
         <!--Button to bring up songs section of new jeans-->
         <button onClick="njSongs()" id="njSongsBut">
-            <img src="Photos/newJeansSongs.jpg">
+            <img src="Photos/NewJeans/newJeansSongs.jpg">
             <p>Songs</p>
 
         </button>
@@ -80,7 +80,7 @@
             <!--Button that brings up Minjis Information-->
             <button onClick="minji()" id="minjiBut">
 
-                <img src="Photos/minji.webp">
+                <img src="Photos/NewJeans/minji.webp">
                 <p>Minji</p>
 
             </button>
@@ -88,7 +88,7 @@
             <!--Button to bring up Hannis info-->
             <button onClick="hanni()" id="hanniBut">
 
-                <img src="Photos/hanni.jpeg">
+                <img src="Photos/NewJeans/hanni.jpeg">
                 <p>Hanni</p>
 
             </button>
@@ -96,7 +96,7 @@
             <!--Minjis Information-->
             <div id="minji" class="hidden">
 
-                <img src="Photos/minji2.jpeg">
+                <img src="Photos/NewJeans/minji2.jpeg">
 
                 <h1>Info</h1>
 
@@ -124,13 +124,35 @@
         <div id="njSongs" class="hidden">
 
             <!--First Album-->
-            <button id="njAlbum1" onClick="playHypeBoy()">
-                <img src="Photos/newJeansAlbum1.jpeg">
-                <p>New Jeans</p>
-            </button>
+            <div id="album1">
+                <button id="njAlbum1" onClick="playHypeBoy()">
+                    <img src="Photos/NewJeans/newJeansAlbum1.jpeg">
+                    <p>New Jeans</p>
+                </button>
+                <!--Area for Other Songs in Album 1-->
+                <div id="album1Area" class="hidden">
 
-            <!--Hype Boy Audio-->
-            <audio src="Songs/New Jeans/NewJeans - Hype Boy.mp3" id="hypeBoy" class="group-audio" controls></audio>
+                </div>
+            </div>    
+
+            <!--Second Album-->
+            <div id="album2">
+                <button id="njAlbum2" onClick="playOMG()">
+                    <img src="Photos/NewJeans/OMG.jpg">
+                    <p>OMG</p>
+                </button>
+                <div id="album2Area" class="hidden">
+                    <p> HI</p>
+                </div>
+            </div>
+
+            <!--Audios-->
+            <div id="audios">
+                <audio src="Songs/New Jeans/NewJeans - Hype Boy.mp3" id="hypeBoy" class="group-audio" controls></audio>
+                <audio src="Songs/New Jeans/NewJeans - OMG.mp3" id="OMG" class="group-audio" controls></audio>
+
+            </div>
+            
         </div>
     </div>
 
