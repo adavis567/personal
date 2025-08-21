@@ -26,10 +26,7 @@ function home() {
     document.getElementById("njBackBut").classList.add("hidden")
     document.getElementById("groups").classList.remove("hidden")
     document.body.style.backgroundImage = 'none'
-    document.querySelectorAll('.group-audio').forEach(audio => {
-        audio.pause();
-        audio.currentTime = 0;
-    });
+    stopAudio()
 }
 
 //Back Button to bring you back to new jeans home
@@ -125,6 +122,10 @@ function njSongs() {
     document.getElementById("njMembers").classList.add("hidden");
     document.getElementById("njMemBut").classList.add("hidden");
     document.getElementById("njBackBut").classList.remove("hidden");
+    document.getElementById("album1").classList.remove("hidden")
+    document.getElementById("album1Area").classList.add("hidden")
+    document.getElementById("album2").classList.remove("hidden")
+    document.getElementById("album2Area").classList.add("hidden")
     disableControls();
 }
 
