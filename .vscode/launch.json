@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "HelloDialog",
+      "request": "launch",
+      "mainClass": "HelloDialog",
+      "projectName": "personal-1_a4627373"
+    },
+    {
+      "type": "java",
+      "name": "Hello2",
+      "request": "launch",
+      "mainClass": "Hello2",
+      "projectName": "personal-1_a4627373"
+    },
+    {
+      "type": "java",
+      "name": "Hello",
+      "request": "launch",
+      "mainClass": "Hello",
+      "projectName": "personal-1_a4627373"
+    },
+    {
+      "type": "java",
       "name": "Main",
       "request": "launch",
       "mainClass": "Main",
